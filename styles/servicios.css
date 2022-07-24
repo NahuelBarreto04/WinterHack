@@ -23,12 +23,10 @@ background: linear-gradient(90deg, rgba(24,24,24,1) 31.27%, rgba(24,24,24,1) 52.
 }
 
 h1{
-    background: linear-gradient(269.84deg, #FFFFFF 29.14%, #D7B4FF 43.27%, #D7B4FF 43.7%, #BC81FF 56.13%, #9C46FF 69.02%);
+    background: var(--violet-gradient);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: transparent;  
 
-font-size: 40px;
-font-weight: 700;
+    font-size: 40px;
+    font-weight: 700;
 }
