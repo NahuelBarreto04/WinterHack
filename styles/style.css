@@ -49,6 +49,7 @@ body {
     font-family: var(--font-Readex-pro);
     font-size: 1.5rem;
     padding: .5rem 1rem;
+    display: none;
 }
 
 
@@ -64,7 +65,7 @@ body {
     align-self: stretch;
     font-family: var(--font-Readex-pro);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color-violet);
 }
 
@@ -73,7 +74,7 @@ body {
     border-bottom: .2rem solid #C0C0C0;
     width: 100%;
     outline: none;
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1rem 0;
     font-family: var(--font-Readex-pro);
     font-size: 1.6rem;
     font-weight: 700;
@@ -108,6 +109,11 @@ body {
     text-decoration: underline;
 }
 
-.form__error-valitationInput {
+
+.form__validate {
+    border-color: green;
+}
+
+.form__error-validationInput {
     border-color: red;
 }

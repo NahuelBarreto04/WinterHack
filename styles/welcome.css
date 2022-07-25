@@ -70,3 +70,8 @@
 .hero__img {
     width: 40rem;
 }
+
+.form--login {
+    min-height: 40rem;
+    width: 50rem;
+}
