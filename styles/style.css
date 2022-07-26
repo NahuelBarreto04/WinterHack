@@ -96,8 +96,9 @@ body {
     font-family: var(--font-Readex-pro);
     border: none;
     background-color: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .form__already-span {

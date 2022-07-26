@@ -12,8 +12,13 @@ const createForm = (form) => {
   }
   formContainer.appendChild(div);
 };
+
 const validationRegister = ({ target }) => {
-  console.log(target.name);
+  const formRegister = document.forms.formRegister;
+  const inputName = formRegister.elements.registerName;
+  const inputSurname = formRegister.elements.registerSurname;
+  const inputUser = formRegister.elements.registerUser;
+  const inputPass = formRegister.elements.registerPass;
   const nameValue = inputName;
   const surnameValue = inputSurname;
   const userValue = inputUser.value;
@@ -40,5 +45,13 @@ const validationRegister = ({ target }) => {
         inputPass.classList.add("form__error-validationInput");
       }
       break;
+  }
+};
+
+let validation = () => {
+  if (true) {
+    window.location.href = "/html/home/home.html";
+  } else {
+    console.log();
   }
 };

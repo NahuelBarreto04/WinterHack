@@ -24,8 +24,6 @@ const formLoginInner = () => {
         <input class="form__input" type="password" name="loginPass" id="loginPass">
         <button class="btn" type="submit">Iniciar Sesión</button>
     </form>
+    <button class="form__already" id="noAccount">no tengo cuenta<span class="form__already-span">, registrarme</span></button> 
    `;
 };
-// {
-//   /* <button class="form__already" id="noAcc">no tengo cuenta<span class="form__already-span">,registrarme</span></button> */
-// }
