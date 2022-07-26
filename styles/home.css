@@ -9,12 +9,17 @@ body{
     transform: translate(-50%, -50%);
 }
 
+.home__title__container{
+    width: 913px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .home__title{
-    position: absolute;
     width: 399px;
     height: 50px;
-    left: 260px;
-    bottom: 343px;
     font-size: 40px;
     line-height: 50px;
     color: var(--color-white);
@@ -34,11 +39,6 @@ body{
     border-radius: 10px;
 }
 
-.home__btn__container{
-    position: absolute;
-    left: 100px;
-}
-
 .home__btn{
     background: #8821FF;
     width: 241px;
@@ -49,10 +49,15 @@ body{
     font-size: 30px;
     line-height: 38px;
     cursor: pointer;
-    margin: 50px;
+    margin: 70px 0 0 130px;
 }
 
 .home__title__span{
-    color: #fafafa;
+    background: var(--color-white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.button__back__container{
+    margin: 20px;
+}
