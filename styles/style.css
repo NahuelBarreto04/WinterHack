@@ -6,7 +6,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-    --violet-gradient: linear-gradient(269deg, rgba(255,255,255,1) 0%, rgba(215,180,255,1) 16.91%, rgba(215,180,255,1) 35.94%, rgba(188,129,255,1) 53.44%, rgba(156,70,255,1) 73.98%);
     --font-Readex-pro: 'Readex Pro', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
     --color-violet: #8A24FF;
@@ -30,18 +29,29 @@ body {
 
 .hero__form-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 40%;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background: var(--color-white);
-    width: 40.5rem;
-    min-height: 50rem;
+    width: 45rem;
+    min-height: 55rem;
     border-radius: 1rem;
+    gap: 1rem;
+}
+
+.form__error-validation {
+    background-color: var(--color-violet);
+    color: var(--color-white);
+    font-family: var(--font-Readex-pro);
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
 }
 
 .form__inputs-container {
@@ -49,7 +59,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 2.5rem;
+
 }
 
 .form__label {
@@ -65,15 +76,42 @@ body {
     border-bottom: .2rem solid #C0C0C0;
     width: 100%;
     outline: none;
+    padding: 0 0 1rem 1rem;
+    font-family: var(--font-Readex-pro);
+    font-size: 1.6rem;
+    font-weight: 700;
+
 }
 
 .btn {
     width: 20rem;
     height: 4rem;
+    font-family: var(--font-Readex-pro);
     background: var(--color-violet);
     color: var(--color-white);
     border: none;
     outline: none;
     border-radius: 1rem;
+    cursor: pointer;
+}
 
+.form__already {
+    font-family: var(--font-Readex-pro);
+    border: none;
+    background-color: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form__already-span {
+    color: #000;
+    font-weight: 700;
+}
+
+.form__already:hover {
+    text-decoration: underline;
+}
+
+.form__error-valitationInput {
+    border-color: red;
 }
