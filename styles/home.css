@@ -67,3 +67,42 @@ body{
 .button__back__container{
     padding: 20px;
 }
+
+
+@media (max-width: 768px) {
+    .home__container{
+        width: 513px;
+        height: 580px;
+        margin-bottom: 20px;
+    }
+
+    .home__center{
+        padding-top: 300px;
+    }
+
+    .home__title__container{
+        width: 513px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+    .home__container{
+        width: 280px;
+        height: 550px;
+    }
+
+    .home__center{
+        padding-top: 300px;
+    }
+
+    .home__title__container{
+        width: 213px;
+        padding-left: 80px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+
+    .home__btn{
+        margin: 70px 0 0 20px;
+    }
+}
