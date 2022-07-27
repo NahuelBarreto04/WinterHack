@@ -1,6 +1,6 @@
 const formContainer = document.getElementById("formContainer");
 document.addEventListener("DOMContentLoaded", () => {
-  createForm(formRegisterInner);
+  // createForm(formRegisterInner);
   const formRegister = document.forms.formRegister;
   const already = document.getElementById("already");
 

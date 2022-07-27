@@ -1,6 +1,6 @@
 const formContainer = document.getElementById("formContainer");
 document.addEventListener("DOMContentLoaded", () => {
-  createForm(formLoginInner);
+  // createForm(formLoginInner);
   const noAccBtn = document.getElementById("noAccount");
   console.log("asd");
   noAccBtn.addEventListener("click", () => {

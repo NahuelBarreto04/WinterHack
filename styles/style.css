@@ -34,9 +34,10 @@ body {
     justify-content: center;
     background: var(--color-white);
     width: 45rem;
-    min-height: 55rem;
+    min-height: 45rem;
     border-radius: 1rem;
     gap: 1rem;
+    padding: 2rem 0;
 }
 
 .form__error-validation {
@@ -116,7 +117,7 @@ body {
     border-color: red;
 }
 
-.btn-back{
+.btn-back {
     width: 60px;
     height: 60px;
     border-radius: 50%;

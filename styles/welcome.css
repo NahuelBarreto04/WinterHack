@@ -22,8 +22,7 @@
 }
 
 .logo__span {
-    background: linear-gradient(269deg, rgba(255, 255, 255, 1) 0%, rgba(215, 180, 255, 1) 16.91%, rgba(215, 180, 255, 1) 35.94%, rgba(188, 129, 255, 1) 53.44%, rgba(156, 70, 255, 1) 73.98%);
-    ;
+    background: var(--color-gradientText);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -52,8 +51,7 @@
 }
 
 .hero__span-title {
-    background: linear-gradient(269deg, rgba(255, 255, 255, 1) 0%, rgba(215, 180, 255, 1) 16.91%, rgba(215, 180, 255, 1) 35.94%, rgba(188, 129, 255, 1) 53.44%, rgba(156, 70, 255, 1) 73.98%);
-    ;
+    background: var(--color-gradientText);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -74,4 +72,13 @@
 .form--login {
     min-height: 40rem;
     width: 50rem;
+}
+
+.input__span-error {
+    font-size: 1.2rem;
+    font-family: var(--font-Readex-pro);
+    font-weight: 600;
+    align-self: flex-start;
+    color: red;
+
 }
