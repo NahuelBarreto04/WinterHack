@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 * { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    
     font-family: 'Readex Pro', sans-serif;
 }
 
@@ -12,21 +10,228 @@ html{
 }
 
 body{
+    background: var(--bg-linear-all);
     height: 100vh;
     width: 100vw;
 }
 
 .servicioscontainer{
-    height: 100vh;
-    background: rgb(24,24,24);
-background: linear-gradient(90deg, rgba(24,24,24,1) 31.27%, rgba(24,24,24,1) 52.87%, rgba(70,69,69,1) 99.97%, rgba(70,69,69,1) 99.98%);
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
 }
 
 h1{
-    background: var(--violet-gradient);
-    -webkit-background-clip: text;
-    color: transparent;  
-
+    background: var(--color-gradientText);
+    -webkit-background-clip :text;
+    -webkit-text-fill-color: transparent;
     font-size: 40px;
     font-weight: 700;
 }
+
+.btncontainer{
+    
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.06);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+width: 913px;
+height: 320px;
+}
+.dosbtnjuntos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+}
+
+
+.btn--big{
+    width: 339px;
+    height: 65px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+   .btncontainer{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 95%;
+   }
+   .dosbtnjuntos{
+    display: flex;
+    justify-content: space-around;
+    
+   
+    
+    
+    
+   }
+
+   .btn{
+    width: 23rem;
+    height: 5rem;
+    font-size: 16px;
+    
+
+   }
+   ul{
+    display: flex;
+    height: 50%;
+   }
+
+}
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .btncontainer{
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: 95%;
+       }
+       .dosbtnjuntos{
+        display: flex;
+        justify-content: space-around;
+        
+       
+        
+        
+        
+       }
+    
+       .btn{
+        width: 23rem;
+        height: 5rem;
+        font-size: 16px;
+        
+    
+       }
+       ul{
+        display: flex;
+        height: 50%;
+       }
+    
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px){
+    .btncontainer{
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: 95%;
+       }
+       .dosbtnjuntos{
+        display: flex;
+        justify-content: space-around;
+        
+       
+        
+        
+        
+       }
+    
+       .btn{
+        width: 23rem;
+        height: 5rem;
+        font-size: 16px;
+        
+    
+       }
+       ul{
+        display: flex;
+        height: 50%;
+       }
+       h1{
+        font-size: 35px;
+       }
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 479px){
+    .btncontainer{
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        height: 95%;
+       }
+       .dosbtnjuntos{
+        display: flex;
+        justify-content: space-around;
+        
+       
+        
+        
+        
+       }
+    
+       .btn{
+        width: 23rem;
+        height: 5rem;
+        font-size: 16px;
+        
+    
+       }
+       ul{
+        display: flex;
+        height: 50%;
+       }
+       h1{
+        font-size: 35px;
+       }
+
+}
+@media only screen and (min-width: 320px) and (max-width: 424px){
+    .btncontainer{
+        display: flex;
+        
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: 95%;
+       }
+       .dosbtnjuntos{
+        display: flex;
+        justify-content: space-around;
+        
+       
+        
+        
+        
+       }
+    
+       .btn{
+        width: 20rem;
+        height: 5rem;
+        font-size: 16px;
+        
+    
+       }
+       ul{
+        display: flex;
+        height: 50%;
+       }
+       h1{
+        font-size: 30px;
+       }
+
+}
+
+
