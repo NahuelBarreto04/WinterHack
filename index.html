@@ -32,10 +32,12 @@
                     <form action="" name="formRegister" class="form__inputs-container">
                         <label class="form__label" for="registerName">Nombre:</label>
                         <input class="form__input" type="text" name="registerName" id="registerName">
-                        <span class="input__span-error">La contrseña debe tener minimo 8 caracteres</span>
+                        <span class="input__span-error" data-input="name">La contrseña debe tener minimo 8
+                            caracteres</span>
                         <label class="form__label" for="surname">Apellido:</label>
                         <input class="form__input" type="text" name="registerSurname" id="surname">
-                        <span class="input__span-error">La contrseña debe tener minimo 8 caracteres</span>
+                        <span class="input__span-error" data-input="surname">La contrseña debe tener minimo 8
+                            caracteres</span>
                         <label class="form__label" for="registerUser">Usuario:</label>
                         <input class="form__input" type="text" name="registerUser" id="registerUser">
                         <span class="input__span-error"></span>
@@ -46,7 +48,6 @@
                     </form>
                     <button class="form__already" id="already">ya tengo cuenta<span class="form__already-span">,
                             ingresar</span></button>
-
                 </div>
                 <!-- <div class="form form--login">
                     <span class="form__error-validation">Por favor completa todos los campos</span>

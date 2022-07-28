@@ -1,4 +1,9 @@
 const formContainer = document.getElementById("formContainer");
+const formRegister = document.forms.formRegister;
+const inputName = formRegister.elements.registerName;
+const inputSurname = formRegister.elements.registerSurname;
+const inputUser = formRegister.elements.registerUser;
+const inputPass = formRegister.elements.registerPass;
 document.addEventListener("DOMContentLoaded", () => {
   // createForm(formRegisterInner);
   const formRegister = document.forms.formRegister;
@@ -6,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
-    validation();
+    validation(inputName, inputSurname, inputUser, inputPass);
   });
-  formRegister.addEventListener("keydown", (e) => {
-    validationRegister(e);
-  });
+  // formRegister.addEventListener("keydown", (e) => {
+  //   validationRegister(e);
+  // });
   already.addEventListener("click", () => {
     window.location.href = "/html/login/login.html";
   });
