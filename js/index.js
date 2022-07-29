@@ -13,9 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     validation(inputName, inputSurname, inputUser, inputPass);
   });
-  // formRegister.addEventListener("keydown", (e) => {
-  //   validationRegister(e);
-  // });
   already.addEventListener("click", () => {
     window.location.href = "/html/login/login.html";
   });
