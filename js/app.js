@@ -1,7 +1,10 @@
 const updateLocal = (item, element) => {
   return localStorage.setItem(item, JSON.stringify(element));
 };
-
+const getLocal = (item, element) => {
+  return localStorage.getItem(item, JSON.parse(element));
+};
+let users = JSON.parse(localStorage.getItem("users")) || [];
 const findData = (input) => {
   return input.getAttribute("data-input");
 };
@@ -32,4 +35,44 @@ const capitaliceStr = (strs) => {
   let capitaliceString = "";
   strArr.forEach((str) => (capitaliceString += `${firstLetterMayus(str)} `));
   return capitaliceString.trim();
+};
+
+const createUserAndLocal = (obj) => {
+  users = [...users, obj];
+  return updateLocal("users", users);
+};
+
+const createCbu = () => {
+  const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let cbu = "";
+  for (let i = 0; i < 16; i++) {
+    cbu += arr[parseInt(Math.random() * arr.length)];
+  }
+  return checkExistCbu(cbu);
+};
+const checkExistCbu = (cbu) => {
+  if (users.length !== 0) {
+    if (users.some((user) => user.cbu === cbu)) {
+      return createCbu();
+    } else {
+      return cbu;
+    }
+  } else {
+    return cbu;
+  }
+};
+const checkUser = (userInput) => {
+  if (users.length !== 0) {
+    if (users.some((user) => user.user === userInput.value)) {
+      return inputError(
+        userInput,
+        "Este usuario ya está registrado",
+        findData(userInput)
+      );
+    } else {
+      return allInputsValid(userInput, findData(userInput));
+    }
+  } else {
+    return allInputsValid(userInput, findData(userInput));
+  }
 };

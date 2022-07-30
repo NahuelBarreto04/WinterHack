@@ -1,7 +1,8 @@
 const allInputsValid = (name, surname, user, pass) =>
   noEmpty(name, surname, user, pass) &&
   allLengthValid(name, surname, user, pass) &&
-  nameDifSurname(name, surname);
+  nameDifSurname(name, surname) &&
+  !alreadyUser(user);
 const noEmpty = (name, surname, user, pass) =>
   name.value !== "" &&
   surname.value !== "" &&
@@ -17,7 +18,9 @@ const inputLength = (input, min, max) =>
   input.value.length >= min && input.value.length < max;
 const nameDifSurname = (name, surname) =>
   name.value.toLowerCase() !== surname.value.toLowerCase();
-
+const alreadyUser = (userInput) => {
+  return users.some((user) => user.user === userInput.value);
+};
 const nameDifSurnameError = (name, surname) => {
   if (!nameDifSurname(name, surname)) {
     inputError(
@@ -47,7 +50,7 @@ const emptyError = (name, surname, user, pass) => {
 };
 const lengthError = (name, surname, user, pass) => {
   const higherMin = (input, mensagge, min, data) => {
-    console.log(input.value.length);
+    // console.log(input.value.length);
     if (!(input.value.length >= min)) {
       return inputError(input, mensagge, data);
     } else {
@@ -126,10 +129,12 @@ const validationAll = (name, surname, user, pass) => {
   });
 };
 const validation = (name, surname, user, pass) => {
+  console.log(alreadyUser(user));
   if (!allInputsValid(name, surname, user, pass)) {
     lengthError(name, surname, user, pass);
     nameDifSurnameError(name, surname);
     emptyError(name, surname, user, pass);
+    checkUser(user);
   } else {
     validationAll(name, surname, user, pass);
     const obj = {
@@ -137,7 +142,11 @@ const validation = (name, surname, user, pass) => {
       surname: capitaliceStr(surname.value),
       user: user.value,
       password: pass.value,
+      cbu: createCbu(),
     };
-    console.log(obj);
+    console.log("wtf", obj.cbu);
+    // console.log("asddas");
+    // updateLocal("users", obj);
+    createUserAndLocal(obj);
   }
 };
