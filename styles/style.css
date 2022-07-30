@@ -32,6 +32,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
+    max-width: 1444px;
+
 }
 
 .form {
@@ -44,6 +46,7 @@ body {
     min-height: 55rem;
     border-radius: 1rem;
     gap: 1rem;
+    padding: 2rem 0;
 }
 
 .form__error-validation {
@@ -52,6 +55,7 @@ body {
     font-family: var(--font-Readex-pro);
     font-size: 1.5rem;
     padding: .5rem 1rem;
+    display: none;
 }
 
 .form__inputs-container {
@@ -67,7 +71,7 @@ body {
     align-self: stretch;
     font-family: var(--font-Readex-pro);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color-violet);
 }
 
@@ -76,7 +80,7 @@ body {
     border-bottom: .2rem solid #C0C0C0;
     width: 100%;
     outline: none;
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1rem 0;
     font-family: var(--font-Readex-pro);
     font-size: 1.6rem;
     font-weight: 700;
@@ -95,12 +99,17 @@ body {
     cursor: pointer;
 }
 
+.btn:active {
+    background: #8a40df;
+}
+
 .form__already {
     font-family: var(--font-Readex-pro);
     border: none;
-    background-color: none;
-    font-size: 1.5rem;
+    background-color: transparent;
+    font-size: 1.3rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .form__already-span {
@@ -112,11 +121,18 @@ body {
     text-decoration: underline;
 }
 
-.form__error-valitationInput {
+
+.form__validate {
+    border-color: green;
+}
+
+
+
+.form__error-validationInput {
     border-color: red;
 }
 
-.btn-back{
+.btn-back {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -125,4 +141,55 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.icon__error {
+    color: red;
+    font-size: 1.5rem;
+}
+
+
+@media (min-width:320px) and (max-width:480px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 90%;
+    }
+}
+
+@media (min-width:600px) and (max-width:1200px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 70%;
+    }
+}
+
+@media (min-width:1500px) {
+
+    .form {
+        width: 70%;
+    }
+
+    .form__label {
+        font-size: 2.5rem;
+    }
+
+    .form__input {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        width: 20rem;
+        height: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    .form__already {
+        font-size: 1.8rem;
+    }
 }
