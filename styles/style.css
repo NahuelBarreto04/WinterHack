@@ -25,6 +25,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
+    max-width: 1444px;
+
 }
 
 .form {
@@ -34,7 +36,7 @@ body {
     justify-content: center;
     background: var(--color-white);
     width: 45rem;
-    min-height: 45rem;
+    min-height: 55rem;
     border-radius: 1rem;
     gap: 1rem;
     padding: 2rem 0;
@@ -90,10 +92,14 @@ body {
     cursor: pointer;
 }
 
+.btn:active {
+    background: #8a40df;
+}
+
 .form__already {
     font-family: var(--font-Readex-pro);
     border: none;
-    background-color: none;
+    background-color: transparent;
     font-size: 1.3rem;
     cursor: pointer;
     margin-top: 1rem;
@@ -128,4 +134,55 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.icon__error {
+    color: red;
+    font-size: 1.5rem;
+}
+
+
+@media (min-width:320px) and (max-width:480px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 90%;
+    }
+}
+
+@media (min-width:600px) and (max-width:1200px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 70%;
+    }
+}
+
+@media (min-width:1500px) {
+
+    .form {
+        width: 70%;
+    }
+
+    .form__label {
+        font-size: 2.5rem;
+    }
+
+    .form__input {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        width: 20rem;
+        height: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    .form__already {
+        font-size: 1.8rem;
+    }
 }

@@ -18,9 +18,24 @@ const searchSpan = (input, data) => {
 };
 function inputError(input, mensaje, data) {
   const inputSpan = searchSpan(input, data);
-  inputSpan.innerHTML = mensaje;
+  inputSpan.innerHTML = `<i class="fa-solid fa-circle-xmark icon__error"></i> ${mensaje}`;
   input.classList.add("form__error-validationInput");
 }
+const validationAll = (name, surname, user, pass) => {
+  const inputs = [name, surname, user, pass];
+  const datas = ["name", "surname", "user", "password"];
+  inputs.forEach((input) => {
+    datas.forEach((data) => {
+      validateInput(input, data);
+    });
+  });
+};
+const validateInput = (input, data) => {
+  const inputSpan = searchSpan(input, data);
+  inputSpan.innerHTML = "";
+  input.classList.remove("form__error-validationInput");
+  input.classList.add("form__validate");
+};
 
 const firstLetterMayus = (strs) => {
   const str = strs.trim();

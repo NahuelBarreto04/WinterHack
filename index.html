@@ -8,6 +8,7 @@
     <title>AssureBanking</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -28,9 +29,9 @@
             </article>
             <article class="hero__form-container" id="formContainer">
                 <div class="form">
-                    <span class="form__error-validation" id="spanError">Por favor completa todos los campos</span>
                     <form action="" name="formRegister" class="form__inputs-container">
-                        <label class="form__label" for="registerName">Nombre:</label>
+                        <label class="form__label" for="registerName"><i
+                                class="fa-solid fa-hexagon-xmark"></i>Nombre:</label>
                         <input class="form__input" type="text" data-input="name" name="registerName" id="registerName">
                         <span class="input__span-error" data-input="name"></span>
                         <label class="form__label" for="surname">Apellido:</label>

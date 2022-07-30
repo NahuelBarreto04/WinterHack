@@ -70,13 +70,13 @@ const lengthError = (name, surname, user, pass) => {
   );
   higherMin(
     surname,
-    "El nombre debe tener minimo 4 caracteres",
+    "El apellido debe tener minimo 4 caracteres",
     4,
     findData(surname)
   );
   higherMin(
     user,
-    "El nombre debe tener minimo 4 caracteres",
+    "El nombre de usuario debe tener minimo 4 caracteres",
     4,
     findData(user)
   );
@@ -94,13 +94,13 @@ const lengthError = (name, surname, user, pass) => {
   );
   minorMax(
     surname,
-    "El nombre debe tener menos 30 caracteres",
+    "El apellido debe tener menos 30 caracteres",
     30,
     findData(surname)
   );
   minorMax(
     user,
-    "El nombre debe tener menos 12 caracteres",
+    "El nombre de usuario debe tener menos 12 caracteres",
     12,
     findData(user)
   );
@@ -112,22 +112,6 @@ const lengthError = (name, surname, user, pass) => {
   );
 };
 
-const validateInput = (input, data) => {
-  const inputSpan = searchSpan(input, data);
-  inputSpan.innerHTML = "";
-  input.classList.remove("form__error-validationInput");
-  input.classList.add("form__validate");
-};
-
-const validationAll = (name, surname, user, pass) => {
-  const inputs = [name, surname, user, pass];
-  const datas = ["name", "surname", "user", "password"];
-  inputs.forEach((input) => {
-    datas.forEach((data) => {
-      validateInput(input, data);
-    });
-  });
-};
 const validation = (name, surname, user, pass) => {
   console.log(alreadyUser(user));
   if (!allInputsValid(name, surname, user, pass)) {
@@ -148,5 +132,6 @@ const validation = (name, surname, user, pass) => {
     // console.log("asddas");
     // updateLocal("users", obj);
     createUserAndLocal(obj);
+    setTimeout(() => (window.location.href = "/html/home/home.html"), 1000);
   }
 };

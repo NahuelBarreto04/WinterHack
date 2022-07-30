@@ -28,17 +28,17 @@
             </article>
             <article class="hero__form-container" id="formContainer">
                 <div class="form form--login">
-                    <span class="form__error-validation">Por favor completa todos los campos</span>
                     <form action="" name="formLogin" class="form__inputs-container">
                         <label class="form__label" for="loginUser">Usuario:</label>
-                        <input class="form__input" type="text" name="loginUser" id="loginUser">
-                        <span class="input__span-error">La contrseña debe tener minimo 8 caracteres</span>
+                        <input class="form__input" type="text" data-input="user" name="loginUser" id="loginUser">
+                        <span class="input__span-error" data-input="user"></span>
                         <label class="form__label" for="loginPass">Contraseña:</label>
-                        <input class="form__input" type="password" name="loginPass" id="loginPass">
-                        <span class="input__span-error">La contrseña debe tener minimo 8 caracteres</span>
+                        <input class="form__input" data-input="password" type="password" name="loginPass"
+                            id="loginPass">
+                        <span class="input__span-error" data-input="password"></span>
                         <button class="btn" type="submit">Iniciar Sesión</button>
                     </form>
-                    <button class="form__noAcc">no tengo cuenta<span class="form__already-span">,
+                    <button class="form__already" id="noAccount">no tengo cuenta<span class="form__already-span">,
                             registrarme</span></button>
                 </div>
             </article>
@@ -47,7 +47,6 @@
     <script src="/js/component/components.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/loginjs/login.js"></script>
-    <!-- <script src="js/index.js"></script> -->
 </body>
 
 </html>
