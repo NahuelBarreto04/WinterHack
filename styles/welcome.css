@@ -92,10 +92,13 @@
         font-size: 1.8rem;
     }
 
+    .form--login {
+        width: 90%;
+    }
+
     .hero {
         flex-direction: column;
         align-items: center;
-        height: auto;
         gap: 2rem;
         padding: 3rem 0;
     }
@@ -185,6 +188,6 @@
     }
 
     .hero__img {
-        width: 60rem;
+        width: 50rem;
     }
 }
