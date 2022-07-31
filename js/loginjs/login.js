@@ -2,7 +2,6 @@ const formContainer = document.getElementById("formContainer");
 const formLogin = document.forms.formLogin;
 const userLogin = formLogin.elements.loginUser;
 const passLogin = formLogin.elements.loginPass;
-console.log(userLogin, passLogin);
 const noAccBtn = document.getElementById("noAccount");
 noAccBtn.addEventListener("click", () => {
   window.location.href = "/index.html";
@@ -32,6 +31,7 @@ const checkLoginUser = (userInput, passInput) => {
   if (userFind.password === passInput.value) {
     validateInput(passInput, findData(passInput));
     setTimeout(() => (window.location.href = "/html/home/home.html"), 1000);
+    activeUser(userFind);
   } else {
     inputError(passInput, "Contraseña invalida", findData(passInput));
   }

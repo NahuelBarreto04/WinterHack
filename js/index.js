@@ -5,7 +5,6 @@ const inputSurname = formRegister.elements.registerSurname;
 const inputUser = formRegister.elements.registerUser;
 const inputPass = formRegister.elements.registerPass;
 document.addEventListener("DOMContentLoaded", () => {
-  // createForm(formRegisterInner);
   const formRegister = document.forms.formRegister;
   const already = document.getElementById("already");
 

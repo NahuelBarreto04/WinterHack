@@ -91,3 +91,14 @@ const checkUser = (userInput) => {
     return allInputsValid(userInput, findData(userInput));
   }
 };
+
+const backPage = () => {
+  setTimeout(() => window.history.back(), 500);
+};
+
+const activeUser = (user) => {
+  if (user) {
+    updateLocal("activeUser", user);
+  }
+};
+const updateChangesUser = () => {};
