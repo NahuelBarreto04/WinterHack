@@ -50,7 +50,6 @@ const emptyError = (name, surname, user, pass) => {
 };
 const lengthError = (name, surname, user, pass) => {
   const higherMin = (input, mensagge, min, data) => {
-    // console.log(input.value.length);
     if (!(input.value.length >= min)) {
       return inputError(input, mensagge, data);
     } else {
@@ -113,7 +112,6 @@ const lengthError = (name, surname, user, pass) => {
 };
 
 const validation = (name, surname, user, pass) => {
-  console.log(alreadyUser(user));
   if (!allInputsValid(name, surname, user, pass)) {
     lengthError(name, surname, user, pass);
     nameDifSurnameError(name, surname);
@@ -127,11 +125,11 @@ const validation = (name, surname, user, pass) => {
       user: user.value,
       password: pass.value,
       cbu: createCbu(),
+      services: [],
+      balance: 0,
     };
-    console.log("wtf", obj.cbu);
-    // console.log("asddas");
-    // updateLocal("users", obj);
     createUserAndLocal(obj);
+    activeUser(obj);
     setTimeout(() => (window.location.href = "/html/home/home.html"), 1000);
   }
 };
