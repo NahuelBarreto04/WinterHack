@@ -36,11 +36,12 @@ body {
     justify-content: center;
     background: var(--color-white);
     width: 45rem;
-    min-height: 55rem;
+    min-height: 50rem;
     border-radius: 1rem;
     gap: 1rem;
     padding: 2rem 0;
 }
+
 
 .form__error-validation {
     background-color: var(--color-violet);
@@ -56,7 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.8rem;
 
 }
 
@@ -149,6 +150,19 @@ body {
 
     .form {
         width: 90%;
+    }
+
+    @media (max-height:700px) {
+        .form__inputs-container {
+            gap: 1rem;
+        }
+
+        .form__label {
+            font-size: 1.4rem;
+        }
+
+
+
     }
 }
 
