@@ -88,17 +88,22 @@
 
 
 @media (min-width:320px) and (max-width:480px) {
+
+
     .logo__text {
-        font-size: 1.8rem;
+        font-size: 1.9rem;
     }
 
     .form--login {
         width: 90%;
+        min-height: 38rem;
+
     }
 
     .hero {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 2rem;
         padding: 3rem 0;
     }
@@ -121,6 +126,11 @@
         display: none;
     }
 
+    @media (max-height:600px) {
+        .hero {
+            height: auto;
+        }
+    }
 
 }
 
