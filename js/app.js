@@ -1,8 +1,11 @@
+const welcome = "/index.html";
+const home = "/html/home/home.html";
+const services = "/html/servicios/servicios.html";
 const updateLocal = (item, element) => {
   return localStorage.setItem(item, JSON.stringify(element));
 };
-const getLocal = (item, element) => {
-  return localStorage.getItem(item, JSON.parse(element));
+const getLocal = (item) => {
+  return JSON.parse(localStorage.getItem(item));
 };
 let users = JSON.parse(localStorage.getItem("users")) || [];
 const findData = (input) => {

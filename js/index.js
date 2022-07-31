@@ -16,3 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "/html/login/login.html";
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  console.log(getLocal("activeUser"));
+  if (getLocal("activeUser")) {
+    window.location.href = "/html/home/home.html";
+  }
+});
