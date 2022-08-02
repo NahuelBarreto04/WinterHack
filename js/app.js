@@ -63,7 +63,7 @@ const createUserAndLocal = (obj) => {
 const createCbu = () => {
   const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   let cbu = "";
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 22; i++) {
     cbu += arr[parseInt(Math.random() * arr.length)];
   }
   return checkExistCbu(cbu);
@@ -95,8 +95,8 @@ const checkUser = (userInput) => {
   }
 };
 
-const backPage = () => {
-  setTimeout(() => window.history.back(), 500);
+const goToPage = (root) => {
+  return setTimeout(() => (window.location.href = root), 500);
 };
 
 const activeUser = (user) => {
@@ -104,6 +104,12 @@ const activeUser = (user) => {
     updateLocal("activeUser", user);
   }
 };
-const updateChangesUser = () => {};
-
-const userBalance = () => {};
+const updateChangesUser = () => {
+  const activeUser = getLocal("activeUser");
+  users = users.filter((user) => activeUser.user !== user.user);
+  users = [...users, activeUser];
+};
+const userBalance = () => {
+  const activeUser = getLocal("activeUser");
+  return activeUser.balance;
+};

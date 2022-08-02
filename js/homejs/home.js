@@ -19,10 +19,10 @@ leaveBtn.addEventListener("click", exitSesion);
 buttonsHome.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (btn.innerHTML.toLowerCase() === "consultas") {
-      // return (window.location.href = consultas);
+      // return goToPage(consults);
       return console.log("consultas");
     } else if (btn.innerHTML.toLowerCase() === "servicios") {
-      return (window.location.href = services);
+      return goToPage(services);
     } else if (btn.innerHTML.toLowerCase() === "depósitos") {
       // return (window.location.href = depositos);
       return console.log("dépositos");
