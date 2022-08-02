@@ -86,7 +86,13 @@
 
 
 @media (min-width:320px) and (max-width:480px) {
+    .hero__form-container {
+        width: 100%;
+    }
 
+    .form {
+        width: 90%;
+    }
 
     .logo__text {
         font-size: 1.9rem;
@@ -124,10 +130,23 @@
         display: none;
     }
 
-    @media (max-height:600px) {
+    @media (max-height:700px) {
         .hero {
             height: auto;
         }
+
+        .form__inputs-container {
+            gap: 1rem;
+        }
+
+        .form__label {
+            font-size: 1.6rem;
+        }
+
+        .form__input {
+            font-size: 1.2rem;
+        }
+
     }
 
 }
@@ -167,6 +186,14 @@
 }
 
 @media (min-width:1000px) and (max-width:1200px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 70%;
+    }
+
 
     .hero__text-cont-container {
         gap: 3rem;
@@ -181,7 +208,30 @@
     }
 }
 
+
 @media (min-width:1500px) {
+    .form {
+        width: 70%;
+    }
+
+    .form__label {
+        font-size: 2.5rem;
+    }
+
+    .form__input {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        width: 20rem;
+        height: 4.5rem;
+        font-size: 1.8rem;
+    }
+
+    .form__already {
+        font-size: 1.8rem;
+    }
+
     .logo__text {
         font-size: 4rem;
     }
