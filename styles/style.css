@@ -49,6 +49,19 @@ body {
     padding: 2rem 0;
 }
 
+.form__deposito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    width: 45rem;
+    min-height: 50rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
 
 .form__error-validation {
     background-color: var(--color-violet);
@@ -150,6 +163,12 @@ body {
     font-size: 1.5rem;
 }
 
+.home__container{
+    background-color: #3C3042;
+    width: 913px;
+    height: 320px;
+    border-radius: 10px;
+}
 
 @media (min-width:320px) and (max-width:480px) {
     .hero__form-container {
@@ -207,5 +226,9 @@ body {
 
     .form__already {
         font-size: 1.8rem;
+    }
+
+    .form__deposito{
+        background-color: var(--color-white);
     }
 }

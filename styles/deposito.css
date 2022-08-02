@@ -8,14 +8,14 @@ body{
  background: var(--bg-linear-all) fixed;
 }
 
-.home__center{
+.deposito__center{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.home__title__container{
+.deposito__title__container{
     width: 913px;
     height: 100px;
     display: flex;
@@ -23,8 +23,8 @@ body{
     align-items: center;
 }
 
-.home__title{
-    width: 399px;
+.deposito__title{
+    width: 190px;
     height: 50px;
     font-size: 40px;
     line-height: 50px;
@@ -32,15 +32,15 @@ body{
     
 }
 
-.home__title__gradient{
+.deposito__title__gradient{
     background: var(--color-gradientText);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.home__btn{
+.deposito__btn{
     background: #8821FF;
-    width: 241px;
+    width: 281px;
     height: 61px;
     border-radius: 10px;
     color: var(--color-white);
@@ -48,54 +48,75 @@ body{
     font-size: 30px;
     line-height: 38px;
     cursor: pointer;
-    margin: 70px 0 0 130px;
-}
-
-.home__title__span{
-    background: var(--color-white);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 120px 0 0 120px;
 }
 
 .button__back__container{
     padding: 20px;
 }
 
+.form__deposito{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+}
+
+::placeholder{
+    color: var(--color-violet);
+    font-size: 18px;
+}
+
 
 @media (max-width: 768px) {
     .home__container{
         width: 513px;
-        height: 580px;
+        height: 400px;
         margin-bottom: 20px;
     }
 
-    .home__center{
-        padding-top: 300px;
+    .deposito__center{
+        padding-top: 100px;
     }
 
-    .home__title__container{
+    .deposito__title__container{
         width: 513px;
+    }
+
+    .deposito__btn{
+        margin: 100px 0 0 120px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 430px) {
     .home__container{
         width: 280px;
-        height: 550px;
+        height: 350px;
     }
 
-    .home__center{
-        padding-top: 300px;
+    .deposito__center{
+        padding-top: 100px;
     }
 
-    .home__title__container{
+    .deposito__title__container{
         width: 213px;
         padding-left: 80px;
         padding-bottom: 80px;
         text-align: center;
     }
 
-    .home__btn{
+    .deposito__btn{
         margin: 70px 0 0 20px;
+        font-size: 25px;
+        width: 235px;
     }
+
+    .form__deposito{
+        width: 30rem;
+    }
+
+    /* .form{
+        width: 30rem;
+    } */
 }
