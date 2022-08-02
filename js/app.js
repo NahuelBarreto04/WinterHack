@@ -105,3 +105,5 @@ const activeUser = (user) => {
   }
 };
 const updateChangesUser = () => {};
+
+const userBalance = () => {};

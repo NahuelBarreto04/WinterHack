@@ -17,10 +17,18 @@ const exitSesion = () => {
 
 leaveBtn.addEventListener("click", exitSesion);
 buttonsHome.forEach((btn) => {
-  console.log(btn);
   btn.addEventListener("click", () => {
-    if (btn.innerHTML.toLowerCase() === "servicios") {
-      window.location.href = services;
+    if (btn.innerHTML.toLowerCase() === "consultas") {
+      // return (window.location.href = consultas);
+      return console.log("consultas");
+    } else if (btn.innerHTML.toLowerCase() === "servicios") {
+      return (window.location.href = services);
+    } else if (btn.innerHTML.toLowerCase() === "depósitos") {
+      // return (window.location.href = depositos);
+      return console.log("dépositos");
+    } else {
+      // return (window.location.href = depositos);
+      return console.log("transferencia");
     }
   });
 });
