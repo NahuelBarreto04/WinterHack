@@ -43,6 +43,7 @@ body {
     border-radius: 1rem;
     gap: 1rem;
     padding: 2rem 0;
+    position: relative;
 }
 
 
@@ -85,6 +86,21 @@ body {
     font-weight: 700;
     background-color: transparent;
 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form__input--text-center {
+    text-align: center;
 }
 
 .btn {
@@ -159,4 +175,12 @@ body {
     width: 913px;
     height: 320px;
     border-radius: 10px;
+}
+
+.input__span-error {
+    font-size: 1.3rem;
+    font-family: var(--font-Readex-pro);
+    font-weight: 600;
+    align-self: flex-start;
+    color: red;
 }

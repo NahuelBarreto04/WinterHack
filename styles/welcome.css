@@ -74,13 +74,7 @@
     width: 50rem;
 }
 
-.input__span-error {
-    font-size: 1.3rem;
-    font-family: var(--font-Readex-pro);
-    font-weight: 600;
-    align-self: flex-start;
-    color: red;
-}
+
 
 
 

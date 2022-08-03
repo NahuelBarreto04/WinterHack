@@ -108,6 +108,7 @@ const updateChangesUser = () => {
   const activeUser = getLocal("activeUser");
   users = users.filter((user) => activeUser.user !== user.user);
   users = [...users, activeUser];
+  updateLocal("users", users);
 };
 const userBalance = () => {
   const activeUser = getLocal("activeUser");
