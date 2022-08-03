@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root {
     --font-Readex-pro: 'Readex Pro', sans-serif;
     --font-Roboto: 'Roboto', sans-serif;
@@ -25,6 +28,8 @@ body {
     align-items: center;
     justify-content: center;
     width: 40%;
+    max-width: 1444px;
+
 }
 
 .form {
@@ -34,10 +39,14 @@ body {
     justify-content: center;
     background: var(--color-white);
     width: 45rem;
-    min-height: 55rem;
+    min-height: 50rem;
     border-radius: 1rem;
     gap: 1rem;
+    padding: 2rem 0;
 }
+
+
+
 
 .form__error-validation {
     background-color: var(--color-violet);
@@ -45,6 +54,7 @@ body {
     font-family: var(--font-Readex-pro);
     font-size: 1.5rem;
     padding: .5rem 1rem;
+    display: none;
 }
 
 .form__inputs-container {
@@ -52,7 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.8rem;
 
 }
 
@@ -60,7 +70,7 @@ body {
     align-self: stretch;
     font-family: var(--font-Readex-pro);
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--color-violet);
 }
 
@@ -69,10 +79,11 @@ body {
     border-bottom: .2rem solid #C0C0C0;
     width: 100%;
     outline: none;
-    padding: 0 0 1rem 1rem;
+    padding: 0 0 1rem 0;
     font-family: var(--font-Readex-pro);
     font-size: 1.6rem;
     font-weight: 700;
+    background-color: transparent;
 
 }
 
@@ -88,12 +99,17 @@ body {
     cursor: pointer;
 }
 
+.btn:active {
+    background: #8a40df;
+}
+
 .form__already {
     font-family: var(--font-Readex-pro);
     border: none;
-    background-color: none;
-    font-size: 1.5rem;
+    background-color: transparent;
+    font-size: 1.3rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .form__already-span {
@@ -105,11 +121,18 @@ body {
     text-decoration: underline;
 }
 
-.form__error-valitationInput {
+
+.form__validate {
+    border-color: green;
+}
+
+
+
+.form__error-validationInput {
     border-color: red;
 }
 
-.btn-back{
+.btn-back {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -118,4 +141,22 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
+}
+
+.btn-back:active {
+    background: #8a40df;
+
+}
+
+.icon__error {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.home__container {
+    background-color: #3C3042;
+    width: 913px;
+    height: 320px;
+    border-radius: 10px;
 }

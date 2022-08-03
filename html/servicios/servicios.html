@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
+    <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/servicios.css">
+</head>
+
+
 <body>
+    <div class="narrowicon">
+        <button class="btn-back"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"
+                fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H6M12 5l-7 7 7 7" />
+            </svg></button>
+    </div>
     <div class="servicioscontainer">
-        <div class="btnarrow"></div>
         <div class="serviciostitle">
             <h1>Servicios</h1>
         </div>
         <div class="btncontainer">
-           <ul>
-            <li><button>adherir servicios</button></li>
-            <li><button>pagar servicios</button></li>
-           </ul>
-           <ul>
-            <li><button>desvincular servicios</button></li>
-            <li><button>mis comprobantes</button></li>
-           </ul>
+            <ul class="dosbtnjuntos">
+                <li><button class="btn btn--big">adherir servicios</button></li>
+                <li><button class="btn btn--big">pagar servicios</button></li>
+            </ul>
+            <ul class="dosbtnjuntos">
+                <li><button class="btn btn--big">desvincular servicios</button></li>
+                <li><button class="btn btn--big">mis comprobantes</button></li>
+            </ul>
         </div>
 
     </div>
-    
+    <script src="/js/app.js"></script>
+    <script src="/js/servicios/services.js"></script>
 </body>
+
 </html>
