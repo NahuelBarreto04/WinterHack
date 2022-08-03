@@ -34,7 +34,6 @@ const formPropAccount = () => {
 };
 const validationPropDeposit = (activeUser, balance) => {
   if (balance.value !== "" && Number(balance.value) !== 0) {
-    console.log("asdas");
     activeUser.balance += Number(balance.value);
     updateLocal("activeUser", activeUser);
     updateChangesUser();
