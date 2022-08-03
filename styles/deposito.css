@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Readex Pro', sans-serif;
+}
+
+body {
+    background: var(--bg-linear-all) fixed;
+    position: relative;
+}
+
+.header {
+    z-index: 2;
+}
+
+.hero {
+    position: relative;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.deposito__title__container {
+    width: 913px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deposito__title {
+    width: 190px;
+    height: 50px;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--color-white);
+
+}
+
+.deposito__title__gradient {
+    background: var(--color-gradientText);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.deposito__btn {
+    background: #8821FF;
+    width: 281px;
+    height: 61px;
+    border-radius: 10px;
+    color: var(--color-white);
+    border: none;
+    font-size: 30px;
+    line-height: 38px;
+    cursor: pointer;
+    margin: 120px 0 0 120px;
+}
+
+.button__back__container {
+    padding: 20px;
+}
+
+.form__deposito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(54, 52, 52, 0.151);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+::placeholder {
+    color: var(--color-violet);
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    .home__container {
+        width: 513px;
+        height: 400px;
+        margin-bottom: 20px;
+    }
+
+    .deposito__center {
+        padding-top: 100px;
+    }
+
+    .deposito__title__container {
+        width: 513px;
+    }
+
+    .deposito__btn {
+        margin: 100px 0 0 120px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .form {
+        width: 90%;
+    }
+
+    .home__container {
+        width: 280px;
+        height: 350px;
+    }
+
+    .deposito__center {
+        padding-top: 100px;
+    }
+
+    .deposito__title__container {
+        width: 213px;
+        padding-left: 80px;
+        padding-bottom: 80px;
+        text-align: center;
+    }
+
+    .deposito__btn {
+        margin: 70px 0 0 20px;
+        font-size: 25px;
+        width: 235px;
+    }
+
+
+    /* .form{
+        width: 30rem;
+    } */
+}

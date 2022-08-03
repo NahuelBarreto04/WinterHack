@@ -39,12 +39,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.home__container {
-    background-color: #3C3042;
-    width: 913px;
-    height: 320px;
-    border-radius: 10px;
-}
 
 .home__btn {
     background: #8821FF;

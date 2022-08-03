@@ -46,6 +46,8 @@ body {
 }
 
 
+
+
 .form__error-validation {
     background-color: var(--color-violet);
     color: var(--color-white);
@@ -152,62 +154,9 @@ body {
     font-size: 1.5rem;
 }
 
-
-@media (min-width:320px) and (max-width:480px) {
-    .hero__form-container {
-        width: 100%;
-    }
-
-    .form {
-        width: 90%;
-    }
-
-    @media (max-height:700px) {
-        .form__inputs-container {
-            gap: 1rem;
-        }
-
-        .form__label {
-            font-size: 1.6rem;
-        }
-
-        .form__input {
-            font-size: 1.2rem;
-        }
-    }
-}
-
-@media (min-width:600px) and (max-width:1200px) {
-    .hero__form-container {
-        width: 100%;
-    }
-
-    .form {
-        width: 70%;
-    }
-}
-
-@media (min-width:1500px) {
-
-    .form {
-        width: 70%;
-    }
-
-    .form__label {
-        font-size: 2.5rem;
-    }
-
-    .form__input {
-        font-size: 2.4rem;
-    }
-
-    .btn {
-        width: 20rem;
-        height: 4.5rem;
-        font-size: 1.8rem;
-    }
-
-    .form__already {
-        font-size: 1.8rem;
-    }
+.home__container {
+    background-color: #3C3042;
+    width: 913px;
+    height: 320px;
+    border-radius: 10px;
 }
