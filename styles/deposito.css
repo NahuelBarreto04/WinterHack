@@ -6,14 +6,22 @@
 
 body {
     background: var(--bg-linear-all) fixed;
+    position: relative;
 }
 
-.deposito__center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.header {
+    z-index: 2;
 }
+
+.hero {
+    position: relative;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .deposito__title__container {
     width: 913px;
@@ -59,12 +67,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background: rgba(54, 52, 52, 0.151);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-radius: 10px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 
