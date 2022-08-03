@@ -69,3 +69,16 @@ const depositPropioInner = () => {
   </form>
 </div>`;
 };
+
+const popUpBalanceInner = () => {
+  return `<div class="consultas_card">
+  <div class="close__popup"><i class="fa-solid fa-xmark"></i></div>
+
+  <p class="card__text">Su saldo es: $<span id="balanceSpan"></span></p>`;
+};
+const popUpCbuInner = () => {
+  return `<div class="consultas_card">
+  <div class="close__popup"><i class="fa-solid fa-xmark"></i></div>
+
+  <p class="card__text">Su CBU es: <span id="cbuSpan"></span></p>`;
+};

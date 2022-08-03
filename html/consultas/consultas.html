@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="/styles/consultas.css">
+    <title>Consultas</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/consultas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="button__back__container">
-            <button class="btn-back"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg></button>
+            <button class="btn-back"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"
+                    fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                </svg></button>
         </nav>
     </header>
-   
-    <section class="consultascontainer">
 
-        <div class="btncontainer">
-           
-            <button class="btn_consultas">Saldo</button>
-            <button class="btn_consultas">CBU</button>
-           
+    <section class="consultascontainer" id="hero">
+        <div class="consutas_title-container">
+            <h1 class="consultas_title">Consultas</h1>
         </div>
+        <div class="btncontainer home__container">
+
+            <button class="btn btn--big">Saldo</button>
+            <button class="btn btn--big">CBU</button>
+
+        </div>
+        </article>
 
     </section>
-    
-    <article class="consultascontainer">
+    <!-- <article class="popUp">
         <div class="consultas_card">
             <p>CBU:</p>
-        </div>
+        </div> -->
 
-    </article>
-    <article  class="consultascontainer">
-        <div class="consultas_card">
-            <p>Su saldo es:</p>
-    </article>
-    
+
+    <script src="/js/component/components.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/consult/consult.js"></script>
+
 </body>
+
 </html>

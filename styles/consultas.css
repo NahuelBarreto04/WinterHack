@@ -1,10 +1,11 @@
-body{
+body {
     background: var(--bg-linear-all) fixed;
-   }
+    position: relative;
+}
 
 .header {
     width: 100%;
-    height: 8rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -24,34 +25,32 @@ body{
     align-items: center;
 }
 
-.consultascontainer {
-    height: 100vh;
 
+
+.popUp {
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
     align-items: center;
-
-    background: rgb(24, 24, 24);
-    background: linear-gradient(115.32deg, #181818 -2.98%, #24152C 62.52%, #464545 98.58%, #464545 98.59%, #464545 98.61%, #4B2E59 98.61%);
+    justify-content: center;
+    box-shadow: rgba(31, 38, 135, 0.37) 0px 8px 32px 0px;
+    backdrop-filter: blur(1px);
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(54, 52, 52, 0.153);
 }
 
 .btncontainer {
-    width: 913px;
-    height: 320px;
     left: 263px;
     top: 387px;
 
-    background: rgba(250, 250, 250, 0.06);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
 
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
-    
+
     gap: 4rem;
 }
 
@@ -62,7 +61,7 @@ body{
     top: 514px;
 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-   
+
 
     font-family: var(--font-Readex-pro);
     background: var(--color-violet);
@@ -77,7 +76,7 @@ body{
 }
 
 .consultascontainer {
-    height: 100vh;
+    height: calc(100vh - 10rem);
 
     display: flex;
     flex-direction: column;
@@ -85,24 +84,75 @@ body{
     justify-content: center;
     align-items: center;
 
-    background: rgb(24, 24, 24);
-    background: linear-gradient(115.32deg, #181818 -2.98%, #24152C 62.52%, #464545 98.58%, #464545 98.59%, #464545 98.61%, #4B2E59 98.61%);
+    background: var(--bg-linear-all);
 }
 
 
 .consultas_card {
     width: 482px;
-    height: 225px;  
-    
+    height: 225px;
+
     display: flex;
     align-content: center;
     justify-content: center;
     align-items: center;
-    
+
     font-family: var(--font-Readex-pro);
     font-size: xx-large;
     border-radius: 18px;
-    color: var(--color-white); 
-    background-color:  var(--color-violet);
+    color: var(--color-white);
+    background-color: var(--color-violet);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    position: relative;
+}
+
+.consultas_title {
+    background: var(--color-gradientText);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 5rem;
+    font-size: 4rem;
+    font-family: var(--font-Readex-pro);
+}
+
+.close__popup {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.card__text {
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+@media (min-width:320px) and (max-width:599px) {
+    .btncontainer {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 90%;
+    }
+
+    .consultas_card {
+        width: 90%;
+        font-size: 2.3rem;
+    }
+
+}
+
+@media (min-width:600px) and (max-width:900px) {
+    .btn {
+        width: 40rem;
+    }
+
+    .home__container {
+        flex-direction: column;
+        width: 90%;
+    }
 }
