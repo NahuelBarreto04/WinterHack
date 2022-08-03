@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
-*{
+* {
     font-family: 'Readex Pro', sans-serif;
 }
 
-body{
- background: var(--bg-linear-all) fixed;
+body {
+    background: var(--bg-linear-all) fixed;
 }
 
-.home__center{
+.home__center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.home__title__container{
+.home__title__container {
     width: 913px;
     height: 100px;
     display: flex;
@@ -23,22 +23,24 @@ body{
     align-items: center;
 }
 
-.home__title{
-    width: 399px;
-    height: 50px;
+.home__title {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
     font-size: 40px;
     line-height: 50px;
     color: var(--color-white);
-    
+
 }
 
-.home__title__gradient{
+.home__title__gradient {
     background: var(--color-gradientText);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.home__btn{
+
+.home__btn {
     background: #8821FF;
     width: 241px;
     height: 61px;
@@ -51,51 +53,51 @@ body{
     margin: 70px 0 0 130px;
 }
 
-.home__title__span{
+.home__title__span {
     background: var(--color-white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.button__back__container{
+.button__back__container {
     padding: 20px;
 }
 
 
 @media (max-width: 768px) {
-    .home__container{
+    .home__container {
         width: 513px;
         height: 580px;
         margin-bottom: 20px;
     }
 
-    .home__center{
+    .home__center {
         padding-top: 300px;
     }
 
-    .home__title__container{
+    .home__title__container {
         width: 513px;
     }
 }
 
 @media (min-width: 320px) and (max-width: 430px) {
-    .home__container{
+    .home__container {
         width: 280px;
         height: 550px;
     }
 
-    .home__center{
+    .home__center {
         padding-top: 300px;
     }
 
-    .home__title__container{
+    .home__title__container {
         width: 213px;
         padding-left: 80px;
         padding-bottom: 80px;
         text-align: center;
     }
 
-    .home__btn{
+    .home__btn {
         margin: 70px 0 0 20px;
     }
 }

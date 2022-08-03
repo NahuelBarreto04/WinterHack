@@ -130,6 +130,6 @@ const validation = (name, surname, user, pass) => {
     };
     createUserAndLocal(obj);
     activeUser(obj);
-    setTimeout(() => (window.location.href = "/html/home/home.html"), 1000);
+    setTimeout(() => (window.location.href = home), 1000);
   }
 };

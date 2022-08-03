@@ -141,6 +141,12 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border: none;
+}
+
+.btn-back:active {
+    background: #8a40df;
+
 }
 
 .icon__error {
