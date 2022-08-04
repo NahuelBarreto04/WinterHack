@@ -3,6 +3,7 @@ const home = "/html/home/home.html";
 const services = "/html/servicios/servicios.html";
 const deposito = "/html/deposito/deposito.html";
 const consultas = "/html/consultas/consultas.html";
+const transfer = "/html/transfer/transfer.html";
 const updateLocal = (item, element) => {
   return localStorage.setItem(item, JSON.stringify(element));
 };
