@@ -1,0 +1,142 @@
+html{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+body{
+    overflow: hidden;
+    background: var(--bg-linear-all);
+    height: 100vh;
+    width: 100vw;
+}
+.containerboletas{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+    height:80vh;
+    
+   
+
+}
+
+.boletaaldia{
+width: 257px;
+height: 280px;
+background: #FAFAFA;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.boletavencida{
+width: 257px;
+height: 280px;
+background: #FAFAFA;
+border-radius: 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: space-evenly;
+}
+
+.nombre{
+font-family:var(--font-Readex-pro);
+font-weight: 700;
+font-size: 22px;
+color: #8821FF;
+
+}
+
+.precio{
+font-family: var(--font-Readex-pro);
+font-weight: 700;
+font-size: 22px;
+color: #000000;
+}
+
+.vencimiento{
+    font-family:sans-serif;  
+font-weight: 200;
+font-size: 18px;
+color: #000000;
+
+}
+
+.green-span{
+    font-family: var(--font-Readex-pro);
+    background-color: #0EB915;
+    font-size: 15px;
+    padding: 0px 10px;
+    color: #FAFAFA;
+}
+
+.pagar-btn{
+width: 147px;
+height: 30px;
+}
+.red-span{
+    font-family: var(--font-Readex-pro);
+    background-color: #FF0000;
+    font-size: 15px;
+    padding: 0px 10px;
+    color: #FAFAFA;
+}
+
+.btn{
+    margin: 20px 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){}
+
+@media only screen and (min-width: 600px) and (max-width: 767px){}
+
+@media only screen and (min-width: 480px) and (max-width: 599px){
+   body{
+    background:url(/assets/images/grandientbackground.png);
+    background-size:cover;
+   }
+    
+    .containerboletas{
+        height: 140vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 479px){
+    body{
+        background:url(/assets/images/grandientbackground.png);
+        background-size:cover;
+       }
+        
+        .containerboletas{
+            height: 140vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 424px){
+    body{
+        background:url(/assets/images/grandientbackground.png);
+        background-size:cover;
+       }
+        
+        .containerboletas{
+            height: 140vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+}
+
+
+
