@@ -1,7 +1,10 @@
 const selectForm = document.getElementById("formSelect");
 const [propioBtn, tercerosBtn] = document.querySelectorAll(".deposito__btn");
 const mainContainer = document.querySelector(".main");
-
+const btnBack = document.querySelector(".btn-back");
+btnBack.addEventListener("click", () => {
+  goToPage(home);
+});
 propioBtn.addEventListener("click", () => {
   depositProp();
   formPropAccount();
@@ -63,24 +66,28 @@ const tercerosSubmit = () => {
   });
 };
 const validationTerceary = (cbu, balance) => {
-  const notEmpty = cbu.value !== "" && balance.value !== "";
-  const cbuLenght = cbu.value.length === 22 && cbu.value.length < 23;
-  if (!notEmpty && !cbuLenght) {
+  if (!allValid(cbu, balance)) {
     notEmptyError(cbu, balance);
     cbuLenghtError(cbu);
   } else {
+    console.log("sdsjakl");
     validateAll(cbu, balance);
     depositInUser(cbu, balance);
   }
 };
+
+const allValid = (cbu, balance) => noEmpty(cbu, balance) && cbuLenght(cbu);
+const cbuLenght = (cbu) => cbu.value.length === 22 && cbu.value.length < 23;
+
+const noEmpty = (cbu, balance) => cbu.value !== "" && balance.value !== "";
 const notEmptyError = (cbu, balance) => {
-  if (cbu.value === "") {
-    inputError(cbu, "Completa el campo", findData(cbu));
-  }
   if (balance.value === "") {
-    inputError(balance, "Completa el campo", findData(balance));
+    return inputError(balance, "Completa el campo", findData(balance));
   } else {
     validateInput(balance, findData(balance));
+  }
+  if (cbu.value === "") {
+    inputError(cbu, "Completa el campo", findData(cbu));
   }
 };
 const cbuLenghtError = (cbu) => {
@@ -96,10 +103,12 @@ const validateAll = (cbu, balance) => {
 };
 const depositInUser = (cbu, balance) => {
   const findUserCbu = users.find((user) => user.cbu === cbu.value);
-  const activeUser = getLocal("activeUser");
   if (findUserCbu) {
-    activeUser.balance += Number(balance.value);
-    updateLocal("activeUser", activeUser);
+    console.log(findUserCbu);
+    findUserCbu.balance += Number(balance.value);
+    users = users.filter((user) => findUserCbu.user !== user.user);
+    users = [...users, findUserCbu];
+    updateLocal("users", users);
     updateChangesUser();
     setTimeout(() => document.querySelector(".form__deposito").remove(), 500);
   } else {
