@@ -1,5 +1,10 @@
 const [balanceBtn, cbuBtn] = document.querySelectorAll(".btn");
 const hero = document.querySelector("#hero");
+const btnBack = document.querySelector(".btn-back");
+btnBack.addEventListener("click", () => {
+  goToPage(home);
+});
+
 balanceBtn.addEventListener("click", () => {
   createCard(popUpBalanceInner());
   const activeUser = getLocal("activeUser");
