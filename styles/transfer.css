@@ -30,6 +30,15 @@ body {
 .search-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(54, 52, 52, 0.151);
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
 }
 
 .search__card {
@@ -43,9 +52,27 @@ body {
     border-radius: 1rem;
     padding: 0 1rem;
     gap: 1rem;
+    position: relative;
 
 }
 
 .form--search {
     min-height: 40rem;
+}
+
+.dataUser__p {
+    font-family: var(--font-Readex-pro);
+    font-size: 1.5rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.dataUser {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: var(--font-Readex-pro);
+    font-size: 1.4rem;
+    font-weight: 300;
+    width: 20rem;
+    padding: 1rem;
 }

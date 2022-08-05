@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/transfer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
@@ -25,11 +26,11 @@
             <article class="form__container">
                 <div class="form">
                     <div class="form__close"><i class="fa-solid fa-xmark"></i></div>
-                    <form name="formCuentaTerceros" class="form__inputs-container">
+                    <form name="formTransfer" class="form__inputs-container">
                         <label class="form__label" for="userCuenta"><i
                                 class="fa-solid fa-hexagon-xmark"></i>Cuenta</label>
-                        <input class="form__input form__input--text-center" type="number" data-input="cbu"
-                            name="userCbu" id="userCuenta">
+                        <input class="form__input form__input--text-center" type="number" data-input="cuenta"
+                            name="userAccount" id="userCuenta">
                         <label class="form__label" for="userBalance">Monto*:</label>
                         <input class="form__input" type="number" data-input="balance" step="0.01" name="userBalance"
                             id="userBalance">
@@ -52,17 +53,16 @@
                     </form>
                 </div>
             </article>
-            <article class="search-container">
+            <!-- <article class="search-container">
                 <div class="search__card">
                     <label class="form__label" for="userCbu"><i class="fa-solid fa-hexagon-xmark"></i>CBU:</label>
                     <input class="form__input form__input--text-center" type="number" data-input="cbu" name="userCbu"
                         id="userCbu">
                     <span class="input__span-error" data-input="cbu"></span>
-                    <button class="btn" type="submit">Buscar</button>
-
+                    <button class="btn" type="button">Buscar</button>
                 </div>
-            </article>
-            <article>
+            </article> -->
+            <!-- <article class="search-container">
                 <div class="form form--search">
                     <div class="form__close"><i class="fa-solid fa-xmark"></i></div>
                     <form name="formCuentaTerceros" class="form__inputs-container">
@@ -71,7 +71,10 @@
                             name="userCbu" id="userCbu">
                         <span class="input__span-error" data-input="cbu"></span>
                         <div class="dataUser">
-                            <p class="dataUser__p">Propietario:<span class="dataUser"></span></p>
+                            <h2 class="dataUser__p">Propietario:
+                            </h2>
+                            <p class="dataUser">Nahuel
+                                Barreto</p>
                         </div>
                         <label class="form__label" for="userBalance">Nombre y Apellido*:</label>
                         <input class="form__input" type="number" data-input="balance" step="0.01" name="userBalance"
@@ -81,9 +84,12 @@
                     </form>
                 </div>
                 </div>
-            </article>
+            </article> -->
         </section>
     </main>
+    <script src="/js/component/components.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/transfer/transfer.js"></script>
 </body>
 
 </html>

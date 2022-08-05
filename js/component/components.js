@@ -90,3 +90,38 @@ const popUpCbuInner = () => {
 
   <p class="card__text">Su CBU es: <span id="cbuSpan"></span></p>`;
 };
+
+const popUpSearchCbuInner = () => {
+  return `  
+  <form name="formSearchCbu" class="search__card">
+  <div class="form__close" id="close_search"><i class="fa-solid fa-xmark"></i></div>
+  <label class="form__label" for="userCbu"><i class="fa-solid fa-hexagon-xmark"></i>CBU:</label>
+  <input class="form__input form__input--text-center" type="number" data-input="cbu" name="userCbu"
+      id="userCbu">
+  <span class="input__span-error" data-input="cbu"></span>
+  <button class="btn" type="submit">Buscar</button>
+</form>`;
+};
+
+const popUpSaveUserInner = () => {
+  return `   <div class="form form--search">
+  <div class="form__close" id="close_search2"><i class="fa-solid fa-xmark"></i></div>
+  <form name="formSaveUser" class="form__inputs-container">
+      <label class="form__label" for="userCbu"><i class="fa-solid fa-hexagon-xmark"></i>CBU</label>
+      <input class="form__input form__input--text-center" type="number" data-input="cbu"
+          name="userCbu" id="userCbu">
+      <span class="input__span-error" data-input="cbu"></span>
+      <div class="dataUser">
+          <h2 class="dataUser__p">Propietario:
+          </h2>
+          <p class="dataUserName"></p>
+      </div>
+      <label class="form__label" for="userBalance">Nombre y Apellido*:</label>
+      <input class="form__input" type="text" data-input="alias" name="userAlias"
+          id="userBalance">
+      <span class="input__span-error" data-input="alias"></span>
+      <button class="btn" type="submit">Guardar</button>
+  </form>
+</div>
+</div>`;
+};
