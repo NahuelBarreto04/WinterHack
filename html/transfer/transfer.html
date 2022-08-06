@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AssureBanking</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/transfer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -34,9 +34,8 @@
                         <input class="form__input" type="number" data-input="balance" step="0.01" name="userBalance"
                             id="userBalance">
                         <span class="input__span-error" data-input="balance"></span>
-                        <label for="userCbu" class="form__label">Cbu</label>
+                        <label for="userCbu" class="form__label">CBU*</label>
                         <select data-input="select" class="form__input" name="userCbu" id="userCbu">
-
                         </select>
                         <span class="input__span-error" data-input="select"></span>
                         <button class="btn__addCbu" type="button">Agregar un nuevo CBU</button>
@@ -53,38 +52,6 @@
                     </form>
                 </div>
             </article>
-            <!-- <article class="search-container">
-                <div class="search__card">
-                    <label class="form__label" for="userCbu"><i class="fa-solid fa-hexagon-xmark"></i>CBU:</label>
-                    <input class="form__input form__input--text-center" type="number" data-input="cbu" name="userCbu"
-                        id="userCbu">
-                    <span class="input__span-error" data-input="cbu"></span>
-                    <button class="btn" type="button">Buscar</button>
-                </div>
-            </article> -->
-            <!-- <article class="search-container">
-                <div class="form form--search">
-                    <div class="form__close"><i class="fa-solid fa-xmark"></i></div>
-                    <form name="formCuentaTerceros" class="form__inputs-container">
-                        <label class="form__label" for="userCbu"><i class="fa-solid fa-hexagon-xmark"></i>CBU</label>
-                        <input class="form__input form__input--text-center" type="number" data-input="cbu"
-                            name="userCbu" id="userCbu">
-                        <span class="input__span-error" data-input="cbu"></span>
-                        <div class="dataUser">
-                            <h2 class="dataUser__p">Propietario:
-                            </h2>
-                            <p class="dataUser">Nahuel
-                                Barreto</p>
-                        </div>
-                        <label class="form__label" for="userBalance">Nombre y Apellido*:</label>
-                        <input class="form__input" type="number" data-input="balance" step="0.01" name="userBalance"
-                            id="userBalance">
-                        <span class="input__span-error" data-input="balance"></span>
-                        <button class="btn" type="submit">Guardar</button>
-                    </form>
-                </div>
-                </div>
-            </article> -->
         </section>
     </main>
     <script src="/js/component/components.js"></script>

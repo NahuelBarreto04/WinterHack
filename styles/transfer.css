@@ -76,3 +76,14 @@ body {
     width: 20rem;
     padding: 1rem;
 }
+
+
+@media (min-width:280px) and (max-width:580px) {
+    .form {
+        width: 90%;
+    }
+
+    .search__card {
+        width: 90%;
+    }
+}
