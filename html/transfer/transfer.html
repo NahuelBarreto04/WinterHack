@@ -25,7 +25,6 @@
         <section class="hero">
             <article class="form__container">
                 <div class="form">
-                    <div class="form__close"><i class="fa-solid fa-xmark"></i></div>
                     <form name="formTransfer" class="form__inputs-container">
                         <label class="form__label" for="userCuenta"><i
                                 class="fa-solid fa-hexagon-xmark"></i>Cuenta</label>
@@ -36,10 +35,11 @@
                             id="userBalance">
                         <span class="input__span-error" data-input="balance"></span>
                         <label for="userCbu" class="form__label">Cbu</label>
-                        <select class="form__input" name="userCbu" id="userCbu">
+                        <select data-input="select" class="form__input" name="userCbu" id="userCbu">
 
                         </select>
-                        <button class="btn__addCbu">Agregar un nuevo CBU</button>
+                        <span class="input__span-error" data-input="select"></span>
+                        <button class="btn__addCbu" type="button">Agregar un nuevo CBU</button>
                         <label class="form__label" for="userMotive">Motivo:</label>
                         <select name="userMotive" id="userMotive" class="form__input">
                             <option value="estudios">Estudios</option>
@@ -49,7 +49,7 @@
                             <option value="gastosPersonales">Gastos Personales</option>
                         </select>
                         <span class="input__span-error" data-input="user"></span>
-                        <button class="btn" type="submit">Depositar</button>
+                        <button class="btn" type="submit">Transferir</button>
                     </form>
                 </div>
             </article>
