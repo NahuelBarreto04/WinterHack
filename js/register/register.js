@@ -127,6 +127,7 @@ const validation = (name, surname, user, pass) => {
       cbu: createCbu(),
       services: [],
       balance: 0,
+      usersCbu: [],
     };
     createUserAndLocal(obj);
     activeUser(obj);

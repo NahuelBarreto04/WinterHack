@@ -25,7 +25,7 @@ buttonsHome.forEach((btn) => {
     } else if (btn.innerHTML.toLowerCase() === "depósitos") {
       return goToPage(deposito);
     } else {
-      return goToPage(deposito);
+      return goToPage(transfer);
     }
   });
 });
