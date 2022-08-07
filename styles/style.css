@@ -203,3 +203,7 @@ input[type=number] {
     cursor: pointer;
     color: var(--color-violet);
 }
+
+.navbar {
+    padding: 20px;
+}

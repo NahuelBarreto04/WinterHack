@@ -87,25 +87,25 @@ const lengthError = (name, surname, user, pass) => {
   );
   minorMax(
     name,
-    "El nombre debe tener menos 30 caracteres",
+    "El nombre debe tener menos de 30 caracteres",
     30,
     findData(name)
   );
   minorMax(
     surname,
-    "El apellido debe tener menos 30 caracteres",
+    "El apellido debe tener menos de 30 caracteres",
     30,
     findData(surname)
   );
   minorMax(
     user,
-    "El nombre de usuario debe tener menos 12 caracteres",
+    "El nombre de usuario debe tener menos de 12 caracteres",
     12,
     findData(user)
   );
   minorMax(
     pass,
-    "La contraseña debe tener menos 30 caracteres",
+    "La contraseña debe tener menos de 30 caracteres",
     30,
     findData(pass)
   );
