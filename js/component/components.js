@@ -125,3 +125,12 @@ const popUpSaveUserInner = () => {
 </div>
 </div>`;
 };
+
+const boletaInner = (service, balance, expiration) => {
+  return ` <span id="servicio" class="nombre">${service}</span>
+  <span id="precio" class="precio"> $${balance}</span>
+  <span id="fecha" class="vencimiento">Vencimiento ${expiration}</span>
+  ${spanIn(expiration)}
+  <button class="btn pagar-btn">Pagar</button>
+`;
+};

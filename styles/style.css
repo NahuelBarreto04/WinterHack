@@ -113,6 +113,7 @@ input[type=number] {
     outline: none;
     border-radius: 1rem;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .btn--big {

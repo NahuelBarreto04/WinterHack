@@ -13,39 +13,27 @@ formService.addEventListener("submit", (e) => {
 
 const validationSercice = (serviceName, balance, expiration) => {
   const activeUser = getLocal("activeUser");
-
-  //   console.log(expiration.value.split("-").reverse().join("-"));
-  //   serviceNameLenghtError(serviceName);
-  //   console.log(serviceNameLenght(serviceName));
-  //   balanceLenghtError(balance);
-  //   expirationError(expiration);
-  //   serviceNameLenghtError(serviceName);
-  //   console.log(serviceNameLenghtError(serviceName));
-  //   console.log(balanceLenght(balance));
-  //   console.log(expirationTest);
-  //   console.log(expiration.value !== "");
-  console.log(serviceExist(activeUser, serviceName));
   if (!validateServiceAll(activeUser, serviceName, balance, expiration)) {
-    serviceAlreadyExist(activeUser, serviceName);
+    expirationError(expiration);
     serviceNameLenghtError(serviceName);
     balanceLenghtError(balance);
-    expirationError(expiration);
+    serviceAlreadyExist(activeUser, serviceName);
     return;
   } else {
-    validationServiceAll(serviceName, balance, expiration);
-    console.log("valid");
+    validationServices(serviceName, balance, expiration);
     const objService = {
       service: capitaliceStr(serviceName.value),
-      balance: balance.value,
+      balance: Number(balance.value),
       expiration: expiration.value.split("-").reverse().join("-"),
       paid: false,
     };
     activeUser.services.push(objService);
     updateLocal("activeUser", activeUser);
+    updateChangesUser();
     setTimeout(() => location.reload(), 200);
   }
 };
-const validationServiceAll = (serviceName, balance, expiration) => {
+const validationServices = (serviceName, balance, expiration) => {
   const inputs = [serviceName, balance, expiration];
   const datas = ["name", "monto", "date"];
   inputs.forEach((input) => {
@@ -79,32 +67,34 @@ const balanceLenghtError = (balance) => {
 };
 const serviceAlreadyExist = (activeUser, serviceName) => {
   if (
-    !activeUser.services.some(
-      (service) => service.name !== serviceName.value.trim()
-    )
+    activeUser.services.some(
+      (servicio) =>
+        servicio.service.toLowerCase() === serviceName.value.toLowerCase()
+    ) &&
+    serviceName.value !== ""
   ) {
-    inputError(serviceName, "Este servicio ya existe", findData(serviceName));
-  } else {
-    validateInput(serviceName, findData(serviceName));
+    return inputError(
+      serviceName,
+      "Este servicio ya existe",
+      findData(serviceName)
+    );
   }
 };
 const serviceExist = (activeUser, serviceName) => {
-  if (activeUser.services.length === 0) {
-    return;
-  }
-  activeUser.services.some(
-    (servicio) => servicio.service !== serviceName.value.trim()
+  return activeUser.services.some(
+    (servi) => servi.service.toLowerCase() !== serviceName.value.toLowerCase()
   );
 };
-
 const serviceNameLenghtError = (serviceName) => {
-  serviceName.value === ""
-    ? inputError(serviceName, "Completa el campo", findData(serviceName))
-    : serviceName.value.length > 20
-    ? inputError(
-        serviceName,
-        "el servicio no puede tener más de 20 caracteres",
-        findData(serviceName)
-      )
-    : validateInput(serviceName, findData(serviceName));
+  if (serviceName.value === "") {
+    return inputError(serviceName, "Completa el campo", findData(serviceName));
+  } else if (serviceName.value.length > 20) {
+    return inputError(
+      serviceName,
+      "el servicio no puede tener más de 20 caracteres",
+      findData(serviceName)
+    );
+  } else {
+    validateInput(serviceName, findData(serviceName));
+  }
 };
