@@ -208,3 +208,22 @@ input[type=number] {
 .navbar {
     padding: 20px;
 }
+
+.cardAlert {
+    width: 30rem;
+    height: 20rem;
+    background-color: #8821FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    border-radius: 1rem;
+
+}
+
+.spanAlert {
+    font-family: var(--font-Readex-pro);
+    font-size: 2rem;
+    color: #fff;
+}

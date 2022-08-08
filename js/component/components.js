@@ -131,6 +131,18 @@ const boletaInner = (service, balance, expiration) => {
   <span id="precio" class="precio"> $${balance}</span>
   <span id="fecha" class="vencimiento">Vencimiento ${expiration}</span>
   ${spanIn(expiration)}
-  <button class="btn pagar-btn">Pagar</button>
-`;
+  <button class="btn pagar-btn">Pagar</button>`;
+};
+
+const desvincularInner = (service, balance, expiration) => {
+  return `<p class="titulo">${service}</p>
+  <span class="precio">$${balance}</span>
+  <span class="fecha">Fecha de vencimiento: ${expiration}</span>
+  <button class="btn">Desvincular</button>`;
+};
+
+const comprobanteInner = (service, balance, payDay) => {
+  return `<span class="titulo">${service}</span>
+  <span class="precio">$${balance}</span>
+  <span class="fecha">Fecha de pago: ${payDay}</span>`;
 };

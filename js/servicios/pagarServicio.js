@@ -1,27 +1,10 @@
 const boletasConteiner = document.querySelector(".containerboletas");
-console.log(boletasConteiner);
 document.addEventListener("DOMContentLoaded", () => {
-  const activeUser = getLocal("activeUser");
-  activeUser.services.forEach((element) => {
-    const div = document.createElement("div");
-    div.innerHTML = boletaInner(
-      element.service,
-      element.balance,
-      element.expiration
-    );
-    div.classList.add("boleta");
-    boletasConteiner.appendChild(div);
-    checkExpire(element.expiration);
-    const vencimiento = document.querySelectorAll(`[data-expire="expired"]`);
-    const noExpired = document.querySelectorAll(`[data-expire="notExpired"]`);
-    spanStyle(vencimiento, noExpired);
-  });
-  const btns = document.querySelectorAll(".btn");
-  btns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      payService(e);
-    });
-  });
+  createCards();
+});
+const btnBack = document.querySelector(".btn-back");
+btnBack.addEventListener("click", () => {
+  goToPage(services);
 });
 
 const spanIn = (expiration) => {
@@ -32,7 +15,6 @@ const spanIn = (expiration) => {
   }
 };
 const checkExpire = (expiration) => {
-  console.log(expiration);
   let date = new Date();
   let actualMonth = date.getMonth() + 1;
   let actualDay = date.getDate();
@@ -41,7 +23,6 @@ const checkExpire = (expiration) => {
   let expirationDay = Number(expirationDate[0]);
   let expirationMonth = Number(expirationDate[1]);
   let expirationYear = Number(expirationDate[2]);
-  console.log(expirationYear);
   if (actualYear > expirationYear) {
     return true;
   }
@@ -64,13 +45,69 @@ const spanStyle = (expired, noExpired) => {
 };
 
 const payService = ({ target }) => {
+  const activeUser = getLocal("activeUser");
   const parent = target.parentNode;
   const firtsElement = parent.firstElementChild;
   const nameService = firtsElement.innerHTML;
-  console.log(nameService);
-  const activeUser = getLocal("activeUser");
-  const finds = activeUser.services.find(
+  const findService = activeUser.services.find(
     (servi) => servi.service === nameService
   );
-  console.log(finds);
+  if (findService.balance > activeUser.balance) {
+    createAlert("Fondos Insuficientes", boletasConteiner);
+  } else {
+    findService.paid = true;
+    findService.datePay = getDayPay();
+    activeUser.services = activeUser.services.filter(
+      (servi) => servi.service !== nameService
+    );
+    activeUser.services = [...activeUser.services, findService];
+    activeUser.balance -= findService.balance;
+    updateLocal("activeUser", activeUser);
+    createAlert("Servicio Pagado", boletasConteiner);
+    setTimeout(() => {
+      boletasConteiner.innerHTML = "";
+      createCards();
+    }, 1000);
+    updateChangesUser();
+  }
+};
+
+const createCards = () => {
+  const activeUser = getLocal("activeUser");
+  if (activeUser.services.length > 0) {
+    activeUser.services.forEach((element) => {
+      if (element.paid === false) {
+        const div = document.createElement("div");
+        div.innerHTML = boletaInner(
+          element.service,
+          element.balance,
+          element.expiration
+        );
+        div.classList.add("boleta");
+        boletasConteiner.appendChild(div);
+        checkExpire(element.expiration);
+        const vencimiento = document.querySelectorAll(
+          `[data-expire="expired"]`
+        );
+        const noExpired = document.querySelectorAll(
+          `[data-expire="notExpired"]`
+        );
+        spanStyle(vencimiento, noExpired);
+      }
+    });
+  }
+  const btns = document.querySelectorAll(".btn");
+  btns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      payService(e);
+    });
+  });
+};
+
+const getDayPay = () => {
+  let date = new Date();
+  let actualMonth = date.getMonth() + 1;
+  let actualDay = date.getDate();
+  let actualYear = date.getFullYear();
+  return [actualDay, actualMonth, actualYear].join("/");
 };

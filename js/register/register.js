@@ -10,7 +10,7 @@ const noEmpty = (name, surname, user, pass) =>
   pass.value !== "";
 const allLengthValid = (name, surname, user, pass) =>
   inputLength(name, 4, 30) &&
-  inputLength(surname, 4, 30) &&
+  inputLength(surname, 3, 30) &&
   inputLength(user, 4, 12) &&
   inputLength(pass, 8, 30);
 
@@ -70,7 +70,7 @@ const lengthError = (name, surname, user, pass) => {
   higherMin(
     surname,
     "El apellido debe tener minimo 4 caracteres",
-    4,
+    3,
     findData(surname)
   );
   higherMin(

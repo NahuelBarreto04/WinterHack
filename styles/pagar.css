@@ -12,14 +12,12 @@ body {
 
 .containerboletas {
     display: flex;
-    /* justify-content: space-evenly; */
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.2rem;
     width: 100%;
     height: 80vh;
-
-
+    position: relative;
 
 }
 
@@ -85,6 +83,8 @@ body {
     margin: 20px 20px;
 }
 
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {}
 
 @media only screen and (min-width: 600px) and (max-width: 767px) {}
@@ -96,11 +96,11 @@ body {
     }
 
     .containerboletas {
-        height: 140vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
+        /* justify-content: space-evenly; */
     }
 }
 
@@ -125,11 +125,5 @@ body {
         background-size: cover;
     }
 
-    .containerboletas {
-        height: 140vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+
 }

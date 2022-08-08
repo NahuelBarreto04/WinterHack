@@ -81,7 +81,7 @@ const serviceAlreadyExist = (activeUser, serviceName) => {
   }
 };
 const serviceExist = (activeUser, serviceName) => {
-  return activeUser.services.some(
+  return activeUser.services.every(
     (servi) => servi.service.toLowerCase() !== serviceName.value.toLowerCase()
   );
 };

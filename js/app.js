@@ -117,3 +117,11 @@ const userBalance = () => {
   const activeUser = getLocal("activeUser");
   return activeUser.balance;
 };
+
+const createAlert = (menssage, element) => {
+  const div = document.createElement("div");
+  div.innerHTML = ` <span class="spanAlert">${menssage}</span>`;
+  div.classList.add("cardAlert");
+  element.appendChild(div);
+  setTimeout(() => div.remove(), 1000);
+};
