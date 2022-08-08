@@ -48,7 +48,7 @@ const validateServiceAll = (activeUser, serviceName, balance, expiration) =>
   expirationTest(expiration) &&
   serviceExist(activeUser, serviceName);
 const serviceNameLenght = (serviceName) =>
-  serviceName.value !== "" && serviceName.value.length < 20;
+  serviceName.value !== "" && serviceName.value.length <= 20;
 const balanceLenght = (balance) =>
   balance.value !== "" && Number(balance.value) !== 0;
 

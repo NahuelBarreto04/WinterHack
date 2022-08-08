@@ -1,14 +1,14 @@
 body {
-    background: var(--bg-linear-all);
+    background: var(--bg-linear-all) fixed;
 }
 
 .comprobantecontainer {
-    width: 100vw;
-    height: 80vh;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
+    gap: 1rem;
+    padding: 1rem;
 
 }
 

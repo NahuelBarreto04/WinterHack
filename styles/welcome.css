@@ -27,7 +27,7 @@
 
 .hero {
     display: flex;
-    background: var(--bg-linear-welcome);
+    background: var(--bg-linear-welcome) fixed;
     height: calc(100vh - 6rem);
 }
 
@@ -79,7 +79,7 @@
 
 
 
-@media (min-width:320px) and (max-width:480px) {
+@media (min-width:320px) and (max-width:600px) {
     .hero__form-container {
         width: 100%;
     }
@@ -149,6 +149,11 @@
     .logo__text {
         font-size: 4rem;
     }
+
+    .hero__form-container {
+        width: 100%;
+    }
+
 
     .hero {
         flex-direction: column;

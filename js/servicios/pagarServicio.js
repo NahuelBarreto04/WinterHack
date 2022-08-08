@@ -9,9 +9,9 @@ btnBack.addEventListener("click", () => {
 
 const spanIn = (expiration) => {
   if (checkExpire(expiration)) {
-    return ` <span id="vencimiento" data-expire="expired">Al día</span>`;
+    return ` <span id="vencimiento" data-expire="expired"></span>`;
   } else {
-    return ` <span id="vencimiento" data-expire="notExpired">Al día</span>`;
+    return ` <span id="vencimiento" data-expire="notExpired"></span>`;
   }
 };
 const checkExpire = (expiration) => {
@@ -23,10 +23,11 @@ const checkExpire = (expiration) => {
   let expirationDay = Number(expirationDate[0]);
   let expirationMonth = Number(expirationDate[1]);
   let expirationYear = Number(expirationDate[2]);
+  console.log(expirationMonth, actualMonth);
   if (actualYear > expirationYear) {
     return true;
   }
-  if (actualDay > expirationDay || actualMonth > expirationMonth) {
+  if (actualMonth >= expirationMonth && actualDay >= expirationDay) {
     return true;
   } else {
     return false;

@@ -105,15 +105,10 @@ h1 {
     .dosbtnjuntos {
         display: flex;
         justify-content: space-around;
-
-
-
-
-
     }
 
     .btn {
-        width: 23rem;
+        width: 30rem;
         height: 5rem;
         font-size: 30px;
 
@@ -167,46 +162,9 @@ h1 {
 
 }
 
-@media only screen and (min-width: 425px) and (max-width: 479px) {
-    .btncontainer {
-        display: flex;
-
-        flex-direction: column;
-        align-items: center;
-        width: 60%;
-        height: 95%;
-    }
-
-    .dosbtnjuntos {
-        display: flex;
-        justify-content: space-around;
 
 
-
-
-
-    }
-
-    .btn {
-        width: 23rem;
-        height: 5rem;
-        font-size: 20px;
-
-
-    }
-
-    ul {
-        display: flex;
-        height: 50%;
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-
-}
-
-@media only screen and (min-width: 320px) and (max-width: 424px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     .btncontainer {
         display: flex;
 
