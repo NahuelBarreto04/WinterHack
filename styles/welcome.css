@@ -126,7 +126,7 @@
 
     @media (max-height:700px) {
         .hero {
-            height: auto;
+            height: 100vh;
         }
 
         .form__inputs-container {
