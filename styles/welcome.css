@@ -219,7 +219,7 @@
     .btn {
         width: 20rem;
         height: 4.5rem;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .form__already {
@@ -241,5 +241,33 @@
 
     .hero__img {
         width: 50rem;
+    }
+
+    @media (max-height:800px) {
+        .form__label {
+            font-size: 1.8rem;
+        }
+
+        .form__input {
+            font-size: 1.6rem;
+        }
+
+        .hero__title {
+            font-size: 4.5rem;
+        }
+
+        .hero__p {
+            font-size: 3rem;
+        }
+
+        .btn {
+            font-size: 1.6rem;
+            width: 18rem;
+            height: 4rem;
+        }
+
+        .form__already {
+            font-size: 1.5rem;
+        }
     }
 }

@@ -88,9 +88,7 @@ body {
     }
 
     .home__title__container {
-        width: 213px;
-        padding-left: 80px;
-        padding-bottom: 80px;
+        width: 100%;
         text-align: center;
     }
 

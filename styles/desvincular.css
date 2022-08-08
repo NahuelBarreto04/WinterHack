@@ -1,13 +1,5 @@
-html {
-    height: 100vh;
-    width: 100vw;
-}
-
 body {
-    overflow: hidden;
     background: var(--bg-linear-all);
-    height: 100vh;
-    width: 100vw;
 }
 
 .comprobantecontainer {
@@ -51,7 +43,8 @@ body {
 .fecha {
     font-family: sans-serif;
     font-weight: 200;
-    font-size: 18px;
+    font-size: 14px;
+    word-wrap: break-word;
     color: #000000;
 
 }
@@ -80,31 +73,14 @@ body {
     }
 }
 
-@media only screen and (min-width: 425px) and (max-width: 479px) {
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     body {
         background: url(/assets/images/grandientbackground.png);
         background-size: cover;
     }
 
     .comprobantecontainer {
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 424px) {
-    body {
-        background: url(/assets/images/grandientbackground.png);
-        background-size: cover;
-    }
-
-    .comprobantecontainer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* justify-content: space-evenly; */
+        gap: 1rem;
     }
 }
