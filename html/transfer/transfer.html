@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferencias</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/transfer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="/assets/images/dollar.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="button__back__container">
+            <button class="btn-back" id="leaveBtn"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    viewBox="0 0 24 24" fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                </svg></button>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <article class="form__container">
+                <div class="form">
+                    <form name="formTransfer" class="form__inputs-container">
+                        <label class="form__label" for="userCuenta"><i
+                                class="fa-solid fa-hexagon-xmark"></i>Cuenta</label>
+                        <input class="form__input form__input--text-center" type="number" data-input="cuenta"
+                            name="userAccount" id="userCuenta">
+                        <label class="form__label" for="userBalance">Monto*:</label>
+                        <input class="form__input" type="number" data-input="balance" step="0.01" name="userBalance"
+                            id="userBalance">
+                        <span class="input__span-error" data-input="balance"></span>
+                        <label for="userCbu" class="form__label">CBU*</label>
+                        <select data-input="select" class="form__input" name="userCbu" id="userCbu">
+                        </select>
+                        <span class="input__span-error" data-input="select"></span>
+                        <button class="btn__addCbu" type="button">Agregar un nuevo CBU</button>
+                        <label class="form__label" for="userMotive">Motivo:</label>
+                        <select name="userMotive" id="userMotive" class="form__input">
+                            <option value="estudios">Estudios</option>
+                            <option selected value="alquiler">Alquiler</option>
+                            <option value="bienesServicios">Bienes y Servicios</option>
+                            <option value="prestamos">Prestamos</option>
+                            <option value="gastosPersonales">Gastos Personales</option>
+                        </select>
+                        <span class="input__span-error" data-input="user"></span>
+                        <button class="btn" type="submit">Transferir</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="/js/component/components.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/transfer/transfer.js"></script>
+</body>
+
+</html>

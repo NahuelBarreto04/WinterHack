@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --font-Readex-pro: 'Readex Pro', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
+    --color-violet: #8A24FF;
+    --color-white: #fafafa;
+    --bg-linear-all: linear-gradient(115deg, rgba(24, 24, 24, 1) 0.8%, rgba(36, 21, 44, 1) 64.76%, rgba(70, 69, 69, 1) 99.97%, rgba(70, 69, 69, 1) 99.98%, rgba(75, 46, 89, 1) 100%, rgba(70, 69, 69, 1) 100%);
+    --bg-linear-welcome: linear-gradient(90deg, rgba(24, 24, 24, 1) 31.27%, rgba(24, 24, 24, 1) 52.87%, rgba(70, 69, 69, 1) 99.97%, rgba(70, 69, 69, 1) 99.98%);
+    --color-gradientText: linear-gradient(269.84deg, #FFFFFF 0.32%, #D7B4FF 21.24%, #D7B4FF 44.77%, #BC81FF 66.42%, #9C46FF 91.84%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+}
+
+.hero__form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    max-width: 1444px;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    width: 45rem;
+    min-height: 50rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    padding: 2rem 0;
+    position: relative;
+}
+
+
+
+
+.form__error-validation {
+    background-color: var(--color-violet);
+    color: var(--color-white);
+    font-family: var(--font-Readex-pro);
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    display: none;
+}
+
+.form__inputs-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+
+}
+
+.form__label {
+    align-self: stretch;
+    font-family: var(--font-Readex-pro);
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--color-violet);
+}
+
+.form__input {
+    border: none;
+    border-bottom: .2rem solid #C0C0C0;
+    width: 100%;
+    outline: none;
+    padding: 0 0 1rem 0;
+    font-family: var(--font-Readex-pro);
+    font-size: 1.6rem;
+    font-weight: 700;
+    background-color: transparent;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form__input--text-center {
+    text-align: center;
+}
+
+.btn {
+    width: 20rem;
+    height: 4rem;
+    font-family: var(--font-Readex-pro);
+    background: var(--color-violet);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn--big {
+    width: 339px;
+    height: 65px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.btn:active {
+    background: #8a40df;
+}
+
+.form__already {
+    font-family: var(--font-Readex-pro);
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.form__already-span {
+    color: #000;
+    font-weight: 700;
+}
+
+.form__already:hover {
+    text-decoration: underline;
+}
+
+
+.form__validate {
+    border-color: green;
+}
+
+
+
+.form__error-validationInput {
+    border-color: red;
+}
+
+.btn-back {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+
+}
+
+.btn-back:active {
+    background: #8a40df;
+
+}
+
+.icon__error {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.home__container {
+    width: 913px;
+    height: 320px;
+    background: rgba(250, 250, 250, 0.06);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.input__span-error {
+    font-size: 1.3rem;
+    font-family: var(--font-Readex-pro);
+    font-weight: 600;
+    align-self: flex-start;
+    color: red;
+
+}
+
+.form__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.3rem;
+    cursor: pointer;
+    color: var(--color-violet);
+}
+
+.navbar {
+    padding: 20px;
+}
+
+.cardAlert {
+    width: 30rem;
+    height: 20rem;
+    background-color: #8821FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    border-radius: 1rem;
+
+}
+
+.spanAlert {
+    font-family: var(--font-Readex-pro);
+    font-size: 2rem;
+    color: #fff;
+}

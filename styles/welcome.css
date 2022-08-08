@@ -1,0 +1,273 @@
+.header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    background-color: #181818;
+
+}
+
+.logo {
+    padding-left: 2rem;
+}
+
+.logo__text {
+    font-family: var(--font-Readex-pro);
+    font-weight: 700;
+    color: var(--color-white);
+    font-size: 3rem;
+
+}
+
+.logo__span {
+    background: var(--color-gradientText);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero {
+    display: flex;
+    background: var(--bg-linear-welcome);
+    height: calc(100vh - 6rem);
+}
+
+.hero__text-cont-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    gap: 2rem;
+    max-width: 1444px;
+
+}
+
+.hero__title {
+    font-family: var(--font-Readex-pro);
+    font-weight: 700;
+    font-size: 6rem;
+    width: 90%;
+    color: var(--color-white);
+}
+
+.hero__span-title {
+    background: var(--color-gradientText);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__p {
+    font-family: var(--font-Roboto);
+    font-weight: 400;
+    color: #C0C0C0;
+    font-size: 3rem;
+    width: 90%;
+    letter-spacing: .2rem;
+}
+
+.hero__img {
+    width: 40rem;
+}
+
+.form--login {
+    min-height: 40rem;
+    width: 50rem;
+}
+
+
+
+
+
+
+@media (min-width:320px) and (max-width:480px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .logo__text {
+        font-size: 1.9rem;
+    }
+
+    .form--login {
+        width: 90%;
+        min-height: 38rem;
+
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+
+    .hero__text-cont-container {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero__p {
+        display: none;
+    }
+
+    .hero__img {
+        display: none;
+    }
+
+    @media (max-height:700px) {
+        .hero {
+            height: 100vh;
+        }
+
+        .form__inputs-container {
+            gap: 1rem;
+        }
+
+        .form__label {
+            font-size: 1.6rem;
+        }
+
+        .form__input {
+            font-size: 1.2rem;
+        }
+
+    }
+
+}
+
+@media (min-width:600px) and (max-width:1000px) {
+    .logo__text {
+        font-size: 4rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+
+    .hero__text-cont-container {
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero__p {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .hero__img {
+        display: none;
+    }
+
+}
+
+@media (min-width:1000px) and (max-width:1200px) {
+    .hero__form-container {
+        width: 100%;
+    }
+
+    .form {
+        width: 70%;
+    }
+
+
+    .hero__text-cont-container {
+        gap: 3rem;
+    }
+
+    .hero__title {
+        font-size: 5rem;
+    }
+
+    .hero__p {
+        font-size: 2rem;
+    }
+}
+
+
+@media (min-width:1500px) {
+    .form {
+        width: 70%;
+    }
+
+    .form__label {
+        font-size: 2.5rem;
+    }
+
+    .form__input {
+        font-size: 2.4rem;
+    }
+
+    .btn {
+        width: 20rem;
+        height: 4.5rem;
+        font-size: 1.6rem;
+    }
+
+    .form__already {
+        font-size: 1.8rem;
+    }
+
+    .logo__text {
+        font-size: 4rem;
+    }
+
+    .hero__title {
+        text-align: center;
+    }
+
+    .hero__p {
+        text-align: center;
+        font-size: 3.8rem;
+    }
+
+    .hero__img {
+        width: 50rem;
+    }
+
+    @media (max-height:800px) {
+        .form__label {
+            font-size: 1.8rem;
+        }
+
+        .form__input {
+            font-size: 1.6rem;
+        }
+
+        .hero__title {
+            font-size: 4.5rem;
+        }
+
+        .hero__p {
+            font-size: 3rem;
+        }
+
+        .btn {
+            font-size: 1.6rem;
+            width: 18rem;
+            height: 4rem;
+        }
+
+        .form__already {
+            font-size: 1.5rem;
+        }
+    }
+}

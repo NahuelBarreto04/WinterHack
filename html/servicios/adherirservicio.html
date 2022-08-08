@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/adherirservicio.css">
+    <script src="https://kit.fontawesome.com/756f6a2252.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/assets/images/dollar.png" type="image/x-icon">
+    <title>Adherir Servicio</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <button class="btn-back"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"
+                    fill="none" stroke="#fafafa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H6M12 5l-7 7 7 7" />
+                </svg></button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <article class="form formcontainer">
+                <form class="inputscontainer" name="formAddService">
+                    <label class="form__label" for="nombre">Nombre del servicio*</label>
+                    <input class="form__input input2" data-input="name" type="text" name="nombre" id="nombre">
+                    <span class="input__span-error" data-input="name"></span>
+                    <label class="form__label" for="monto">Monto a abonar*</label>
+                    <input class="form__input input2" data-input="monto" type="number" step="0.01" name="monto"
+                        id="monto">
+                    <span class="input__span-error" data-input="monto"></span>
+                    <label class="form__label" for="vencimiento">Vencimiento*</label>
+                    <input class="form__input input2" type="date" name="vencimiento" data-input="date" id="vencimiento">
+                    <span class="input__span-error" data-input="date"></span>
+                    <input class="btn" type="submit" value="adherir servicio">
+                </form>
+            </article>
+        </section>
+    </main>
+    <script src="/js/app.js"></script>
+    <script src="/js/servicios/addService.js"></script>
+</body>
+
+</html>
