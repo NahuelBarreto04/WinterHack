@@ -1,0 +1,110 @@
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+body {
+    overflow: hidden;
+    background: var(--bg-linear-all);
+    height: 100vh;
+    width: 100vw;
+}
+
+.comprobantecontainer {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.comprobante {
+    width: 238px;
+    height: 258px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+
+.titulo {
+    font-family: var(--font-Readex-pro);
+    font-weight: 700;
+    font-size: 22px;
+    color: #8821FF;
+
+}
+
+.precio {
+    font-family: var(--font-Readex-pro);
+    font-weight: 700;
+    font-size: 22px;
+    color: #000000;
+}
+
+.fecha {
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 18px;
+    color: #000000;
+
+}
+
+.btn-margin {
+    margin: 20px 20px;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    body {
+        background: url(/assets/images/grandientbackground.png);
+        background-size: cover;
+    }
+
+    .comprobantecontainer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 479px) {
+    body {
+        background: url(/assets/images/grandientbackground.png);
+        background-size: cover;
+    }
+
+    .comprobantecontainer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 424px) {
+    body {
+        background: url(/assets/images/grandientbackground.png);
+        background-size: cover;
+    }
+
+    .comprobantecontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* justify-content: space-evenly; */
+    }
+}

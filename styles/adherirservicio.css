@@ -1,0 +1,76 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-linear-all);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.inputscontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 500px;
+    width: 400px;
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .formcontainer {
+        width: 35rem;
+    }
+
+    .inputscontainer {
+        width: 25rem;
+    }
+
+}
+
+@media only screen and (min-width: 425px) and (max-width: 479px) {
+    .formcontainer {
+        width: 35rem;
+    }
+
+    .inputscontainer {
+        width: 25rem;
+    }
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 424px) {
+    .formcontainer {
+        width: 35rem;
+    }
+
+    .inputscontainer {
+        width: 25rem;
+    }
+
+}
