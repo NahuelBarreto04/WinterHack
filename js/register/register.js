@@ -69,7 +69,7 @@ const lengthError = (name, surname, user, pass) => {
   );
   higherMin(
     surname,
-    "El apellido debe tener minimo 4 caracteres",
+    "El apellido debe tener minimo 3 caracteres",
     3,
     findData(surname)
   );
