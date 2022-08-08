@@ -83,13 +83,28 @@ body {
         height: 550px;
     }
 
+    .btn {
+        font-size: 24px;
+    }
+
     .home__center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         padding-top: 300px;
+        width: 100%;
+    }
+
+    .home__title {
+        font-size: 40px;
+        width: 100%;
     }
 
     .home__title__container {
         width: 100%;
         text-align: center;
+        height: auto;
     }
 
     .home__btn {
